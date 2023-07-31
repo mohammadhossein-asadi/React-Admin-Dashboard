@@ -77,6 +77,7 @@ const Team = () => {
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
+            width: "calc(100% - 40px)",
           },
           "& .MuiDataGrid-cell": {
             borderBottom: "none",
