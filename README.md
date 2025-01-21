@@ -69,5 +69,3 @@ A comprehensive admin dashboard built with React, featuring data visualization, 
 ## 🌐 Live Demo
 
 Experience the dashboard here: [React Admin Dashboard](https://react-admin-dashboard-p.vercel.app/)
-
-## 🏗️ Project Structure
