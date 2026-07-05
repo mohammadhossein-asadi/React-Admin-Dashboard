@@ -19,10 +19,7 @@ import {
   Map,
   ChevronLeft,
   ChevronRight,
-  Menu,
-  X,
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 interface NavItem {
   title: string;
@@ -138,8 +135,19 @@ function SidebarContent({ collapsed, onCollapse }: { collapsed: boolean; onColla
   );
 }
 
-export function Sidebar() {
+interface SidebarProps {
+  isMobile?: boolean;
+}
+
+export function Sidebar({ isMobile = false }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
+
+  // برای موبایل، صرفاً محتوا را بدون Sheet نمایش دهید
+  if (isMobile) {
+    return (
+      <SidebarContent collapsed={false} onCollapse={() => {}} />
+    );
+  }
 
   return (
     <>
@@ -152,23 +160,6 @@ export function Sidebar() {
       >
         <SidebarContent collapsed={collapsed} onCollapse={() => setCollapsed(!collapsed)} />
       </aside>
-
-      {/* Mobile sidebar */}
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="fixed left-4 top-4 z-40 lg:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-64 p-0">
-          <SidebarContent collapsed={false} onCollapse={() => {}} />
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="absolute right-4 top-4">
-              <X className="h-4 w-4" />
-            </Button>
-          </SheetTrigger>
-        </SheetContent>
-      </Sheet>
     </>
   );
 }
