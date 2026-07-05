@@ -11,15 +11,31 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SearchCommand } from "@/components/SearchCommand";
-import { Moon, Sun, Bell, Settings, User, LogOut } from "lucide-react";
+import { Moon, Sun, Bell, Settings, User, LogOut, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sidebar } from "./Sidebar";
 
 export function TopBar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="flex h-16 items-center justify-between border-b bg-background px-4 lg:px-6">
+      {/* Mobile Menu - فقط در موبایل */}
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="ghost" size="icon" className="lg:hidden">
+            <Menu className="h-5 w-5" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="w-64 p-0">
+          <Sidebar isMobile />
+        </SheetContent>
+      </Sheet>
+
       {/* Search */}
-      <SearchCommand />
+      <div className="flex-1 mx-4 hidden sm:block">
+        <SearchCommand />
+      </div>
 
       {/* Actions */}
       <div className="flex items-center gap-1">
