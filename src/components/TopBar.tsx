@@ -19,14 +19,9 @@ export function TopBar() {
   return (
     <header className="flex h-16 items-center justify-between border-b bg-background px-4 lg:px-6">
       {/* Search */}
-      <div className="flex items-center gap-2">
-        <div className="relative hidden sm:block">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <Input placeholder="Search..." className="w-64 pl-9 lg:w-80" />
-        </div>
-        <Button variant="ghost" size="icon" className="sm:hidden">
-          <Search className="h-5 w-5" />
-        </Button>
+      <div className="relative flex-1 max-w-md">
+        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Input placeholder="Search..." className="pl-9" />
       </div>
 
       {/* Actions */}
