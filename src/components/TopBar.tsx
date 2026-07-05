@@ -1,5 +1,4 @@
 import { useTheme } from "@/contexts/theme-context";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {
@@ -11,7 +10,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Search, Moon, Sun, Bell, Settings, User, LogOut } from "lucide-react";
+import { SearchCommand } from "@/components/SearchCommand";
+import { Moon, Sun, Bell, Settings, User, LogOut } from "lucide-react";
 
 export function TopBar() {
   const { theme, toggleTheme } = useTheme();
@@ -19,10 +19,7 @@ export function TopBar() {
   return (
     <header className="flex h-16 items-center justify-between border-b bg-background px-4 lg:px-6">
       {/* Search */}
-      <div className="relative flex-1 max-w-md">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input placeholder="Search..." className="pl-9" />
-      </div>
+      <SearchCommand />
 
       {/* Actions */}
       <div className="flex items-center gap-1">
