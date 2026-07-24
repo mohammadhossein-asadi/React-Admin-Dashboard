@@ -52,12 +52,12 @@ export default function DashboardPage() {
   const trends = sparklineTrends[period];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       {/* Header */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-        <div className="flex items-center gap-2">
-          <div className="flex rounded-md border">
+        <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex rounded-md border overflow-hidden">
             {(Object.keys(periodLabels) as Period[]).map((key) => (
               <Button
                 key={key}
@@ -70,7 +70,7 @@ export default function DashboardPage() {
               </Button>
             ))}
           </div>
-          <Button>
+          <Button size="sm">
             <Download className="mr-2 h-4 w-4" />
             Export
           </Button>
@@ -132,18 +132,18 @@ export default function DashboardPage() {
           <CardHeader>
             <CardTitle className="text-lg">Recent Transactions</CardTitle>
           </CardHeader>
-          <CardContent className="max-h-[350px] overflow-y-auto">
+          <CardContent className="max-h-[350px] overflow-y-auto overflow-x-hidden">
             <div className="space-y-3">
               {mockTransactions.map((tx) => (
                 <div
                   key={tx.txId}
-                  className="flex items-center justify-between rounded-lg border p-3"
+                  className="flex items-center justify-between gap-2 rounded-lg border p-3 min-w-0"
                 >
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-medium text-success">{tx.txId}</p>
-                    <p className="text-sm text-muted-foreground">{tx.user}</p>
+                    <p className="truncate text-sm text-muted-foreground">{tx.user}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">{tx.date}</p>
+                  <p className="shrink-0 text-sm text-muted-foreground">{tx.date}</p>
                   <span className="rounded-md bg-success/10 px-2 py-1 text-sm font-medium text-success">
                     ${tx.cost}
                   </span>

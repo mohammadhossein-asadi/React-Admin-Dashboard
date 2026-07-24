@@ -58,7 +58,7 @@ const stackedData: StackedAreaDataItem[] = [
 
 export default function PerformancePage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <Header title="PERFORMANCE" subtitle="Track team skills, metrics, and comparative analysis" />
 
       {/* Gauge Row */}

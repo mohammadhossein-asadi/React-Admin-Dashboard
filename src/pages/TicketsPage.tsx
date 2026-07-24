@@ -45,7 +45,7 @@ export default function TicketsPage() {
   });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <Header title="SUPPORT TICKETS" subtitle="Manage customer support requests" />
 
       {/* Stats */}

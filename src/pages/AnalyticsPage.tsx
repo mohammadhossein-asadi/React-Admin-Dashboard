@@ -40,7 +40,7 @@ export default function AnalyticsPage() {
   }, [dateRange]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <Header title="ANALYTICS" subtitle="Track your key performance metrics" />
         <div className="flex rounded-md border">

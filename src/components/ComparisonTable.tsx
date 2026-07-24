@@ -20,7 +20,7 @@ export function ComparisonTable({ data, title = "Period Comparison" }: Compariso
       <CardHeader>
         <CardTitle className="text-lg">{title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

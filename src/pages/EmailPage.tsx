@@ -41,7 +41,7 @@ export default function EmailPage() {
   const unreadCount = emails.filter((e) => e.folder === "inbox" && !e.read).length;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <Header title="EMAIL" subtitle="Manage your inbox and messages" />
 
       <div className="grid gap-6 lg:grid-cols-[240px_1fr]">

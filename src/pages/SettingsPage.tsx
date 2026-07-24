@@ -41,7 +41,7 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <div className="flex items-center justify-between">
         <Header title="SETTINGS" subtitle="Manage your account settings" />
         <Button onClick={handleSave}>

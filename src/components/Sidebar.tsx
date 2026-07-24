@@ -172,7 +172,7 @@ export function Sidebar({ isMobile = false }: SidebarProps) {
       {/* Desktop sidebar */}
       <aside
         className={cn(
-          "hidden border-r border-sidebar-border bg-sidebar transition-all duration-300 lg:block",
+          "hidden shrink-0 border-r border-sidebar-border bg-sidebar transition-all duration-300 lg:block",
           collapsed ? "w-[72px]" : "w-64"
         )}
       >

@@ -15,27 +15,36 @@ interface StatBoxProps {
 
 export const StatBox = memo(function StatBox({ title, subtitle, icon, progress, increase, sparklineData }: StatBoxProps) {
   return (
-    <Card className="flex items-center justify-between p-4">
-      <CardContent className="flex flex-1 items-center gap-4 p-0">
-        <div className="rounded-md bg-success/10 p-2 text-success">{icon}</div>
-        <div>
-          <p className="text-2xl font-bold text-foreground">{title}</p>
-          <p className="text-sm text-muted-foreground">{subtitle}</p>
-        </div>
-      </CardContent>
-      <div className="flex items-center gap-3">
-        {sparklineData && (
-          <div className="w-16">
-            <Sparkline data={sparklineData} height={28} />
+    <Card className="overflow-hidden">
+      <CardContent className="p-4">
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-3">
+              <div className="shrink-0 rounded-md bg-success/10 p-2 text-success">{icon}</div>
+              <div className="min-w-0">
+                <p className="truncate text-2xl font-bold text-foreground">{title}</p>
+                <p className="truncate text-sm text-muted-foreground">{subtitle}</p>
+              </div>
+            </div>
           </div>
-        )}
-        <ProgressCircle progress={progress} size={50} />
-        <div className="text-right">
-          <p className={cn("text-sm font-semibold", increase.startsWith("+") ? "text-success" : "text-destructive")}>
+          <div className="flex shrink-0 items-center gap-2">
+            {sparklineData && (
+              <div className="hidden w-16 sm:block">
+                <Sparkline data={sparklineData} height={28} />
+              </div>
+            )}
+            <ProgressCircle progress={progress} size={46} />
+          </div>
+        </div>
+        <div className="mt-3 flex items-center justify-between">
+          <div className="w-16 sm:hidden">
+            {sparklineData && <Sparkline data={sparklineData} height={24} />}
+          </div>
+          <p className={cn("text-sm font-semibold ml-auto", increase.startsWith("+") ? "text-success" : "text-destructive")}>
             {increase}
           </p>
         </div>
-      </div>
+      </CardContent>
     </Card>
   );
 });

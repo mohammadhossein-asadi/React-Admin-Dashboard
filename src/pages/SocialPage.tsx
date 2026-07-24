@@ -39,7 +39,7 @@ export default function SocialPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <Header title="TEAM FEED" subtitle="Stay connected with your team's updates" />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">

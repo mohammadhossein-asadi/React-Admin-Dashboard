@@ -33,7 +33,7 @@ export default function EcommercePage() {
   const totalSold = ecommerceProducts.reduce((sum, p) => sum + p.sold, 0);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 min-w-0">
       <Header title="E-COMMERCE" subtitle="Manage products, orders, and sales analytics" />
 
       {/* KPI Cards */}
