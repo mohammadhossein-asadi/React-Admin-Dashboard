@@ -31,7 +31,12 @@ function App() {
     <ThemeProvider>
       <TooltipProvider>
         <ErrorBoundary>
-          <BrowserRouter>
+          <BrowserRouter
+            future={{
+              v7_startTransition: true,
+              v7_relativeSplatPath: true,
+            }}
+          >
             <Suspense fallback={<div className="flex h-screen items-center justify-center text-muted-foreground">Loading...</div>}>
               <Routes>
                 <Route element={<AppLayout />}>
