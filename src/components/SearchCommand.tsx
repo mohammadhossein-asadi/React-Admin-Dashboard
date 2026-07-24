@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
-import { Search, Users, Contact, Receipt, LayoutDashboard, FileText, Calendar, HelpCircle, BarChart3, PieChart, LineChart, Map } from "lucide-react";
+import { Search, Users, Contact, Receipt, LayoutDashboard, FileText, Calendar, HelpCircle, BarChart3, PieChart, LineChart, Map, Settings, BarChart, LayoutGrid } from "lucide-react";
 import { mockDataTeam, mockDataContacts, mockDataInvoices } from "@/data/mock-data";
 
 interface SearchResult {
@@ -27,6 +27,9 @@ const pages: SearchResult[] = [
   { id: "page-pie", title: "Pie Chart", subtitle: "Pie chart view", href: "/pie", category: "Charts", icon: PieChart },
   { id: "page-line", title: "Line Chart", subtitle: "Line chart view", href: "/line", category: "Charts", icon: LineChart },
   { id: "page-geography", title: "Geography", subtitle: "Geography chart view", href: "/geography", category: "Charts", icon: Map },
+  { id: "page-settings", title: "Settings", subtitle: "Account settings", href: "/settings", category: "Pages", icon: Settings },
+  { id: "page-analytics", title: "Analytics", subtitle: "Analytics dashboard", href: "/analytics", category: "Pages", icon: BarChart },
+  { id: "page-kanban", title: "Kanban", subtitle: "Task management board", href: "/kanban", category: "Pages", icon: LayoutGrid },
 ];
 
 export function SearchCommand() {

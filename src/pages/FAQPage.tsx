@@ -30,7 +30,7 @@ const faqItems = [
     id: "5",
     question: "How can I contact customer support?",
     answer:
-      "To contact our support team, you can use the 'Contact Us' form on the Contact page or send an email to support@example.com. Our team will respond to you as soon as possible.",
+      "To contact our support team, you can use the 'Contact Us' form on the Contact page. Our team will respond to you as soon as possible.",
   },
   {
     id: "6",

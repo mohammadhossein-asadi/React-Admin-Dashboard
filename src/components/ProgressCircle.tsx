@@ -1,10 +1,12 @@
+import { memo } from "react";
+
 interface ProgressCircleProps {
   progress?: number;
   size?: number;
   showLabel?: boolean;
 }
 
-export function ProgressCircle({ progress = 0.75, size = 40, showLabel = false }: ProgressCircleProps) {
+export const ProgressCircle = memo(function ProgressCircle({ progress = 0.75, size = 40, showLabel = false }: ProgressCircleProps) {
   const radius = (size - 8) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - progress * circumference;
@@ -40,4 +42,4 @@ export function ProgressCircle({ progress = 0.75, size = 40, showLabel = false }
       )}
     </div>
   );
-}
+});

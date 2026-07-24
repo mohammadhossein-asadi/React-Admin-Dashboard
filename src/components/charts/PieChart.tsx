@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   PieChart as RechartsPieChart,
   Pie,
@@ -8,10 +9,9 @@ import {
 } from "recharts";
 import { useTheme } from "@/contexts/theme-context";
 import { mockPieData } from "@/data/mock-data";
+import { PIE_CHART_COLORS } from "@/lib/chart-colors";
 
-const COLORS = ["#2563eb", "#16a34a", "#f59e0b", "#dc2626", "#8b5cf6", "#ec4899", "#06b6d4", "#84cc16"];
-
-export function PieChart() {
+export const PieChart = memo(function PieChart() {
   const { theme } = useTheme();
   const textColor = theme === "dark" ? "#e2e8f0" : "#1e293b";
   const gridColor = theme === "dark" ? "#334155" : "#e2e8f0";
@@ -29,7 +29,7 @@ export function PieChart() {
           dataKey="value"
         >
           {mockPieData.map((_entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            <Cell key={`cell-${index}`} fill={PIE_CHART_COLORS[index % PIE_CHART_COLORS.length]} />
           ))}
         </Pie>
         <Tooltip
@@ -46,4 +46,4 @@ export function PieChart() {
       </RechartsPieChart>
     </ResponsiveContainer>
   );
-}
+});

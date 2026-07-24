@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -22,6 +23,7 @@ export default function FormPage() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -35,8 +37,11 @@ export default function FormPage() {
     },
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const [submitted, setSubmitted] = useState(false);
+
+  const onSubmit = () => {
+    setSubmitted(true);
+    reset();
   };
 
   return (
@@ -76,6 +81,11 @@ export default function FormPage() {
               {errors.address2 && <p className="text-sm text-destructive">{errors.address2.message}</p>}
             </div>
             <div className="sm:col-span-2 lg:col-span-4 flex justify-end">
+              {submitted && (
+                <p className="mr-4 self-center text-sm font-medium text-success">
+                  User created successfully!
+                </p>
+              )}
               <Button type="submit">Create New User</Button>
             </div>
           </form>

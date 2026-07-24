@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   BarChart,
   Bar,
@@ -15,7 +16,7 @@ interface GeographyChartProps {
   isDashboard?: boolean;
 }
 
-export function GeographyChart({ isDashboard = false }: GeographyChartProps) {
+export const GeographyChart = memo(function GeographyChart({ isDashboard = false }: GeographyChartProps) {
   const { theme } = useTheme();
   const textColor = theme === "dark" ? "#e2e8f0" : "#1e293b";
   const gridColor = theme === "dark" ? "#334155" : "#e2e8f0";
@@ -49,4 +50,4 @@ export function GeographyChart({ isDashboard = false }: GeographyChartProps) {
       </BarChart>
     </ResponsiveContainer>
   );
-}
+});

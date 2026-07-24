@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { PROFILE_AVATAR_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
@@ -17,8 +18,16 @@ import {
   PieChart,
   LineChart,
   Map,
+  Settings,
+  BarChart,
+  LayoutGrid,
   ChevronLeft,
   ChevronRight,
+  ShoppingCart,
+  Mail,
+  MessageSquare,
+  Activity,
+  Rss,
 } from "lucide-react";
 
 interface NavItem {
@@ -36,6 +45,14 @@ const navItems: NavItem[] = [
   { title: "Profile Form", href: "/form", icon: UserPlus, category: "Pages" },
   { title: "Calendar", href: "/calendar", icon: Calendar, category: "Pages" },
   { title: "FAQ", href: "/faq", icon: HelpCircle, category: "Pages" },
+  { title: "E-Commerce", href: "/ecommerce", icon: ShoppingCart, category: "Pages" },
+  { title: "Email", href: "/email", icon: Mail, category: "Pages" },
+  { title: "Support Tickets", href: "/tickets", icon: MessageSquare, category: "Pages" },
+  { title: "Performance", href: "/performance", icon: Activity, category: "Pages" },
+  { title: "Team Feed", href: "/social", icon: Rss, category: "Pages" },
+  { title: "Analytics", href: "/analytics", icon: BarChart, category: "Pages" },
+  { title: "Kanban", href: "/kanban", icon: LayoutGrid, category: "Pages" },
+  { title: "Settings", href: "/settings", icon: Settings, category: "Pages" },
   { title: "Bar Chart", href: "/bar", icon: BarChart3, category: "Charts" },
   { title: "Pie Chart", href: "/pie", icon: PieChart, category: "Charts" },
   { title: "Line Chart", href: "/line", icon: LineChart, category: "Charts" },
@@ -64,6 +81,7 @@ function SidebarContent({ collapsed, onCollapse }: { collapsed: boolean; onColla
           size="icon"
           onClick={onCollapse}
           className="h-8 w-8 shrink-0"
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
         </Button>
@@ -76,7 +94,7 @@ function SidebarContent({ collapsed, onCollapse }: { collapsed: boolean; onColla
         <div className="flex flex-col items-center py-6">
           <div className="h-20 w-20 overflow-hidden rounded-full border-2 border-sidebar-accent">
             <img
-              src="https://i.ibb.co/vQPbSKj/user.png"
+              src={PROFILE_AVATAR_URL}
               alt="Profile"
               className="h-full w-full object-cover"
             />
@@ -142,7 +160,7 @@ interface SidebarProps {
 export function Sidebar({ isMobile = false }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
 
-  // برای موبایل، صرفاً محتوا را بدون Sheet نمایش دهید
+  // Mobile mode: render content without Sheet wrapper
   if (isMobile) {
     return (
       <SidebarContent collapsed={false} onCollapse={() => {}} />

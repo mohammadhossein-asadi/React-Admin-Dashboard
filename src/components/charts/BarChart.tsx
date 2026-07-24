@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   BarChart as RechartsBarChart,
   Bar,
@@ -10,14 +11,13 @@ import {
 } from "recharts";
 import { useTheme } from "@/contexts/theme-context";
 import { mockBarData } from "@/data/mock-data";
+import { BAR_CHART_COLORS } from "@/lib/chart-colors";
 
 interface BarChartProps {
   isDashboard?: boolean;
 }
 
-const COLORS = ["#2563eb", "#16a34a", "#f59e0b", "#dc2626", "#8b5cf6", "#ec4899"];
-
-export function BarChart({ isDashboard = false }: BarChartProps) {
+export const BarChart = memo(function BarChart({ isDashboard = false }: BarChartProps) {
   const { theme } = useTheme();
   const textColor = theme === "dark" ? "#e2e8f0" : "#1e293b";
   const gridColor = theme === "dark" ? "#334155" : "#e2e8f0";
@@ -41,13 +41,13 @@ export function BarChart({ isDashboard = false }: BarChartProps) {
           }}
         />
         {!isDashboard && <Legend />}
-        <Bar dataKey="hot dog" fill={COLORS[0]} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="burger" fill={COLORS[1]} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="sandwich" fill={COLORS[2]} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="kebab" fill={COLORS[3]} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="fries" fill={COLORS[4]} radius={[4, 4, 0, 0]} />
-        <Bar dataKey="donut" fill={COLORS[5]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="hot dog" fill={BAR_CHART_COLORS[0]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="burger" fill={BAR_CHART_COLORS[1]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="sandwich" fill={BAR_CHART_COLORS[2]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="kebab" fill={BAR_CHART_COLORS[3]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="fries" fill={BAR_CHART_COLORS[4]} radius={[4, 4, 0, 0]} />
+        <Bar dataKey="donut" fill={BAR_CHART_COLORS[5]} radius={[4, 4, 0, 0]} />
       </RechartsBarChart>
     </ResponsiveContainer>
   );
-}
+});

@@ -2,6 +2,24 @@
   "name": "react-admin-dashboard",
   "private": true,
   "version": "1.0.0",
+  "description": "Feature-rich admin dashboard with charts, tables, calendar, and forms",
+  "author": "Mohammadhossein Asadi",
+  "license": "MIT",
+  "homepage": "https://react-admin-dashboard-p.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammadhossein-asadi/React-Admin-Dashboard.git"
+  },
+  "keywords": [
+    "react",
+    "dashboard",
+    "admin",
+    "typescript",
+    "tailwindcss",
+    "shadcn",
+    "recharts",
+    "vite"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,6 +37,7 @@
     "@fullcalendar/list": "^6.1.17",
     "@fullcalendar/react": "^6.1.17",
     "@fullcalendar/timegrid": "^6.1.17",
+    "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-avatar": "^1.1.0",
@@ -29,6 +48,7 @@
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.19",
     "@radix-ui/react-tooltip": "^1.1.2",
     "@tanstack/react-table": "^8.20.5",
     "class-variance-authority": "^0.7.0",
@@ -47,6 +67,7 @@
     "@eslint/js": "^9.10.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^26.1.0",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",

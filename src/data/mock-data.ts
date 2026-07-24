@@ -7,7 +7,17 @@ import type {
   LineDataItem,
   PieDataItem,
   GeographyDataItem,
+  Product,
+  ActivityLog,
 } from "@/types";
+import {
+  Receipt,
+  Users,
+  Contact as ContactIcon,
+  TrendingUp,
+  DollarSign,
+  Download,
+} from "lucide-react";
 
 export const mockDataTeam: TeamMember[] = [
   { id: 1, name: "Jon Snow", email: "jonsnow@gmail.com", age: 35, phone: "(665)121-5454", access: "admin" },
@@ -128,3 +138,65 @@ export const mockGeographyData: GeographyDataItem[] = [
   { id: "RUS", value: 423000, country: "Russia" },
   { id: "ZAF", value: 198000, country: "South Africa" },
 ];
+
+export const mockProducts: Product[] = [
+  { id: 1, name: "Enterprise Plan", sales: 1240, revenue: 124000, growth: 12.5 },
+  { id: 2, name: "Pro Subscription", sales: 3450, revenue: 172500, growth: 8.3 },
+  { id: 3, name: "Starter Kit", sales: 5680, revenue: 113600, growth: -2.1 },
+  { id: 4, name: "API Access", sales: 890, revenue: 89000, growth: 22.7 },
+  { id: 5, name: "Custom Integration", sales: 230, revenue: 115000, growth: 15.4 },
+];
+
+export const mockActivityLog: ActivityLog[] = [
+  { id: "a1", user: "Jon Snow", action: "created a new", target: "invoice", timestamp: "2 min ago", icon: Receipt },
+  { id: "a2", user: "Cersei Lannister", action: "updated", target: "team member", timestamp: "15 min ago", icon: Users },
+  { id: "a3", user: "Anya Stark", action: "deleted", target: "contact", timestamp: "1 hour ago", icon: ContactIcon },
+  { id: "a4", user: "Daenerys Targaryen", action: "generated", target: "sales report", timestamp: "3 hours ago", icon: TrendingUp },
+  { id: "a5", user: "Tyrion Lannister", action: "paid", target: "invoice #006", timestamp: "5 hours ago", icon: DollarSign },
+  { id: "a6", user: "Sansa Stark", action: "exported", target: "client data", timestamp: "Yesterday", icon: Download },
+];
+
+export const mockComparisonData = {
+  thisWeek: {
+    emailsSent: "12,361",
+    emailsProgress: 0.75,
+    emailsIncrease: "+14%",
+    sales: "431,225",
+    salesProgress: 0.5,
+    salesIncrease: "+21%",
+    clients: "32,441",
+    clientsProgress: 0.3,
+    clientsIncrease: "+5%",
+    traffic: "1,325,134",
+    trafficProgress: 0.8,
+    trafficIncrease: "+43%",
+  },
+  thisMonth: {
+    emailsSent: "48,220",
+    emailsProgress: 0.82,
+    emailsIncrease: "+18%",
+    sales: "1,845,000",
+    salesProgress: 0.65,
+    salesIncrease: "+28%",
+    clients: "124,500",
+    clientsProgress: 0.45,
+    clientsIncrease: "+12%",
+    traffic: "5,230,000",
+    trafficProgress: 0.9,
+    trafficIncrease: "+35%",
+  },
+  thisYear: {
+    emailsSent: "542,100",
+    emailsProgress: 0.88,
+    emailsIncrease: "+32%",
+    sales: "21,500,000",
+    salesProgress: 0.78,
+    salesIncrease: "+45%",
+    clients: "1,420,000",
+    clientsProgress: 0.55,
+    clientsIncrease: "+22%",
+    traffic: "62,400,000",
+    trafficProgress: 0.95,
+    trafficIncrease: "+58%",
+  },
+};

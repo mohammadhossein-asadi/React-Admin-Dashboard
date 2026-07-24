@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://react-admin-dashboard-p.vercel.app/sitemap.xml

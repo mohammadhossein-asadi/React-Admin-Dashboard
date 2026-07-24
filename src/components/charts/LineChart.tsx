@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   LineChart as RechartsLineChart,
   Line,
@@ -10,14 +11,13 @@ import {
 } from "recharts";
 import { useTheme } from "@/contexts/theme-context";
 import { mockLineData } from "@/data/mock-data";
+import { LINE_CHART_COLORS } from "@/lib/chart-colors";
 
 interface LineChartProps {
   isDashboard?: boolean;
 }
 
-const COLORS = ["#2563eb", "#16a34a", "#f59e0b", "#dc2626"];
-
-export function LineChart({ isDashboard = false }: LineChartProps) {
+export const LineChart = memo(function LineChart({ isDashboard = false }: LineChartProps) {
   const { theme } = useTheme();
   const textColor = theme === "dark" ? "#e2e8f0" : "#1e293b";
   const gridColor = theme === "dark" ? "#334155" : "#e2e8f0";
@@ -41,10 +41,10 @@ export function LineChart({ isDashboard = false }: LineChartProps) {
           }}
         />
         {!isDashboard && <Legend />}
-        <Line type="monotone" dataKey="cost" stroke={COLORS[0]} strokeWidth={2} dot={{ r: 4 }} />
-        <Line type="monotone" dataKey="profit" stroke={COLORS[1]} strokeWidth={2} dot={{ r: 4 }} />
-        <Line type="monotone" dataKey="loss" stroke={COLORS[2]} strokeWidth={2} dot={{ r: 4 }} />
+        <Line type="monotone" dataKey="cost" stroke={LINE_CHART_COLORS[0]} strokeWidth={2} dot={{ r: 4 }} />
+        <Line type="monotone" dataKey="profit" stroke={LINE_CHART_COLORS[1]} strokeWidth={2} dot={{ r: 4 }} />
+        <Line type="monotone" dataKey="loss" stroke={LINE_CHART_COLORS[2]} strokeWidth={2} dot={{ r: 4 }} />
       </RechartsLineChart>
     </ResponsiveContainer>
   );
-}
+});
