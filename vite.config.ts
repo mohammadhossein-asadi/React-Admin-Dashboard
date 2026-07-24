@@ -12,7 +12,7 @@ export default defineConfig({
     dedupe: ["react", "react-dom"],
   },
   optimizeDeps: {
-    include: ["react", "react-dom"],
+    exclude: ["react", "react-dom"],
   },
   server: {
     host: "127.0.0.1",
