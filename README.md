@@ -7,7 +7,10 @@
 A comprehensive admin dashboard built with React 18, Vite, Recharts, FullCalendar, TanStack Table, and shadcn/ui — featuring 11 page views, dark/light theming, global search, and a responsive collapsible sidebar.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-react--admin--dashboard--p.vercel.app-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=3b82f6)](https://react-admin-dashboard-p.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge&labelColor=0a0a0a&color=22c55e)](LICENSE)
+[![React 18](https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite_5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript_5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 </div>
 
@@ -170,15 +173,33 @@ npm run test:run    # Single run
 
 ---
 
-## Author
+## Key Architecture Decisions
 
-**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+### Unified Theme System
+HSL-based CSS variables with `tailwindcss-animate` for smooth transitions. Theme preference persists in `localStorage` and respects system preference on first visit.
 
-[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+### Reusable Data Table
+`DataTable.tsx` wraps TanStack Table with built-in sorting, filtering, pagination, and column visibility — reducing boilerplate across Team, Contacts, and Invoices pages.
+
+### Global Search
+`SearchCommand.tsx` provides a `⌘K`-style command palette that indexes all mock data and routes, enabling instant navigation.
+
+### Component-First Charts
+Each chart type (Bar, Line, Pie, Geography) lives in its own component under `components/charts/`, making it trivial to reuse or extend.
 
 ---
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Mohammadhossein Asadi** — Frontend & Full-Stack Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-mohammadhossein--asadi-0a0a0a?style=flat-square&logo=github)](https://github.com/mohammadhossein-asadi)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohammadhossein--asadi-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/mohammadhossein-asadi)
+
+</div>
