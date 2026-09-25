@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import type { GoalItem } from "@/types";
 
 interface GoalTrackerProps {
@@ -6,10 +7,11 @@ interface GoalTrackerProps {
 }
 
 export function GoalTracker({ goals }: GoalTrackerProps) {
+  const { t } = useTranslation();
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Goal Tracker</CardTitle>
+        <CardTitle className="text-lg">{t("Goal Tracker")}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-5">
         {goals.map((goal) => {
@@ -21,21 +23,24 @@ export function GoalTracker({ goals }: GoalTrackerProps) {
                 <div>
                   <p className="text-sm font-medium">{goal.title}</p>
                   <p className="text-xs text-muted-foreground">
-                    Deadline: {new Date(goal.deadline).toLocaleDateString()}
+                    {t("Deadline")}: {new Date(goal.deadline).toLocaleDateString()}
                   </p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm font-semibold">
                     {goal.unit === "$" ? "$" : ""}
                     {goal.current.toLocaleString()}
-                    {goal.unit !== "$" ? ` ${goal.unit}` : ""} /{" "}
-                    {goal.unit === "$" ? "$" : ""}
+                    {goal.unit !== "$" ? ` ${goal.unit}` : ""} / {goal.unit === "$" ? "$" : ""}
                     {goal.target.toLocaleString()}
                     {goal.unit !== "$" ? ` ${goal.unit}` : ""}
                   </p>
                   <p
                     className={`text-xs font-medium ${
-                      isComplete ? "text-success" : pct >= 70 ? "text-orange-500" : "text-muted-foreground"
+                      isComplete
+                        ? "text-success"
+                        : pct >= 70
+                          ? "text-orange-500"
+                          : "text-muted-foreground"
                     }`}
                   >
                     {pct.toFixed(1)}% {isComplete ? "- Complete!" : ""}

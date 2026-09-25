@@ -1,71 +1,65 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense, useMemo } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/theme-context";
+import { SettingsProvider } from "@/contexts/settings-context";
+import { AuthProvider } from "@/contexts/auth-context";
+import { NotificationsProvider } from "@/contexts/notifications-context";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { RouteError } from "@/components/RouteError";
 import { AppLayout } from "@/layouts/AppLayout";
+import { routes } from "@/lib/routes";
 
-const DashboardPage = lazy(() => import("@/pages/DashboardPage"));
-const TeamPage = lazy(() => import("@/pages/TeamPage"));
-const ContactsPage = lazy(() => import("@/pages/ContactsPage"));
-const InvoicesPage = lazy(() => import("@/pages/InvoicesPage"));
-const FormPage = lazy(() => import("@/pages/FormPage"));
-const CalendarPage = lazy(() => import("@/pages/CalendarPage"));
-const FAQPage = lazy(() => import("@/pages/FAQPage"));
-const BarChartPage = lazy(() => import("@/pages/BarChartPage"));
-const PieChartPage = lazy(() => import("@/pages/PieChartPage"));
-const LineChartPage = lazy(() => import("@/pages/LineChartPage"));
-const GeographyPage = lazy(() => import("@/pages/GeographyPage"));
-const SettingsPage = lazy(() => import("@/pages/SettingsPage"));
-const AnalyticsPage = lazy(() => import("@/pages/AnalyticsPage"));
-const KanbanPage = lazy(() => import("@/pages/KanbanPage"));
-const EcommercePage = lazy(() => import("@/pages/EcommercePage"));
-const EmailPage = lazy(() => import("@/pages/EmailPage"));
-const TicketsPage = lazy(() => import("@/pages/TicketsPage"));
-const PerformancePage = lazy(() => import("@/pages/PerformancePage"));
-const SocialPage = lazy(() => import("@/pages/SocialPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 
 function App() {
+  const router = useMemo(
+    () =>
+      createBrowserRouter([
+        {
+          element: <AppLayout />,
+          errorElement: <RouteError />,
+          children: [
+            ...routes.map(({ href, component: Page }) => ({
+              path: href,
+              element: <Page />,
+            })),
+            { path: "*", element: <NotFoundPage /> },
+          ],
+        },
+      ]),
+    []
+  );
+
   return (
     <ThemeProvider>
-      <TooltipProvider>
-        <ErrorBoundary>
-          <BrowserRouter
-            future={{
-              v7_startTransition: true,
-              v7_relativeSplatPath: true,
-            }}
-          >
-            <Suspense fallback={<div className="flex h-screen items-center justify-center text-muted-foreground">Loading...</div>}>
-              <Routes>
-                <Route element={<AppLayout />}>
-                  <Route path="/" element={<DashboardPage />} />
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/contacts" element={<ContactsPage />} />
-                  <Route path="/invoices" element={<InvoicesPage />} />
-                  <Route path="/form" element={<FormPage />} />
-                  <Route path="/calendar" element={<CalendarPage />} />
-                  <Route path="/faq" element={<FAQPage />} />
-                  <Route path="/bar" element={<BarChartPage />} />
-                  <Route path="/pie" element={<PieChartPage />} />
-                  <Route path="/line" element={<LineChartPage />} />
-                  <Route path="/geography" element={<GeographyPage />} />
-                  <Route path="/settings" element={<SettingsPage />} />
-                  <Route path="/analytics" element={<AnalyticsPage />} />
-                  <Route path="/kanban" element={<KanbanPage />} />
-                  <Route path="/ecommerce" element={<EcommercePage />} />
-                  <Route path="/email" element={<EmailPage />} />
-                  <Route path="/tickets" element={<TicketsPage />} />
-                  <Route path="/performance" element={<PerformancePage />} />
-                  <Route path="/social" element={<SocialPage />} />
-                  <Route path="*" element={<NotFoundPage />} />
-                </Route>
-              </Routes>
-            </Suspense>
-          </BrowserRouter>
-        </ErrorBoundary>
-      </TooltipProvider>
+      <SettingsProvider>
+        <AuthProvider>
+          <NotificationsProvider>
+            <TooltipProvider>
+              <ErrorBoundary>
+                <Suspense
+                  fallback={
+                    <div
+                      role="status"
+                      className="flex h-screen flex-col items-center justify-center gap-4"
+                    >
+                      <div
+                        className="h-10 w-10 animate-spin rounded-full border-4 border-muted border-t-primary"
+                        aria-hidden="true"
+                      />
+                      <p className="text-lg font-bold tracking-tight text-foreground">ADMINIS</p>
+                      <span className="sr-only">Loading page...</span>
+                    </div>
+                  }
+                >
+                  <RouterProvider router={router} />
+                </Suspense>
+              </ErrorBoundary>
+            </TooltipProvider>
+          </NotificationsProvider>
+        </AuthProvider>
+      </SettingsProvider>
     </ThemeProvider>
   );
 }

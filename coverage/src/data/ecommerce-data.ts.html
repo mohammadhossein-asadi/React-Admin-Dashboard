@@ -1,0 +1,229 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/data/ecommerce-data.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/data</a> ecommerce-data.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { EcommerceProduct, EcommerceOrder } from "@/types";
+&nbsp;
+export const ecommerceProducts: EcommerceProduct[] = [
+  { id: 1, name: "Wireless Headphones", category: "Electronics", price: 79.99, stock: 145, sold: 892, rating: 4.5, image: "🎧" },
+  { id: 2, name: "Smart Watch Pro", category: "Electronics", price: 249.99, stock: 67, sold: 431, rating: 4.8, image: "⌚" },
+  { id: 3, name: "Ergonomic Chair", category: "Furniture", price: 399.99, stock: 23, sold: 156, rating: 4.3, image: "🪑" },
+  { id: 4, name: "Running Shoes", category: "Sports", price: 129.99, stock: 210, sold: 1247, rating: 4.6, image: "👟" },
+  { id: 5, name: "Coffee Maker Deluxe", category: "Kitchen", price: 189.99, stock: 89, sold: 567, rating: 4.4, image: "☕" },
+  { id: 6, name: "Backpack Travel", category: "Accessories", price: 59.99, stock: 312, sold: 2103, rating: 4.7, image: "🎒" },
+  { id: 7, name: "LED Desk Lamp", category: "Furniture", price: 45.99, stock: 178, sold: 890, rating: 4.2, image: "💡" },
+  { id: 8, name: "Yoga Mat Premium", category: "Sports", price: 34.99, stock: 245, sold: 1560, rating: 4.5, image: "🧘" },
+  { id: 9, name: "Bluetooth Speaker", category: "Electronics", price: 69.99, stock: 156, sold: 1823, rating: 4.6, image: "🔊" },
+  { id: 10, name: "Stainless Bottle", category: "Accessories", price: 24.99, stock: 420, sold: 3210, rating: 4.8, image: "🍶" },
+  { id: 11, name: "Mechanical Keyboard", category: "Electronics", price: 149.99, stock: 78, sold: 654, rating: 4.7, image: "⌨️" },
+  { id: 12, name: "Plant Pot Set", category: "Home", price: 29.99, stock: 340, sold: 980, rating: 4.3, image: "🪴" },
+];
+&nbsp;
+export const ecommerceOrders: EcommerceOrder[] = [
+  { id: "ORD-7291", customer: "Jon Snow", product: "Smart Watch Pro", amount: 249.99, status: "delivered", date: "2024-01-15" },
+  { id: "ORD-7292", customer: "Cersei Lannister", product: "Wireless Headphones", amount: 79.99, status: "shipped", date: "2024-01-15" },
+  { id: "ORD-7293", customer: "Tyrion Lannister", product: "Ergonomic Chair", amount: 399.99, status: "processing", date: "2024-01-14" },
+  { id: "ORD-7294", customer: "Daenerys Targaryen", product: "Running Shoes", amount: 129.99, status: "pending", date: "2024-01-14" },
+  { id: "ORD-7295", customer: "Arya Stark", product: "Bluetooth Speaker", amount: 69.99, status: "delivered", date: "2024-01-13" },
+  { id: "ORD-7296", customer: "Sansa Stark", product: "Coffee Maker Deluxe", amount: 189.99, status: "shipped", date: "2024-01-13" },
+  { id: "ORD-7297", customer: "Bran Stark", product: "Mechanical Keyboard", amount: 149.99, status: "processing", date: "2024-01-12" },
+  { id: "ORD-7298", customer: "Theon Greyjoy", product: "Yoga Mat Premium", amount: 34.99, status: "delivered", date: "2024-01-12" },
+  { id: "ORD-7299", customer: "Samwell Tarly", product: "LED Desk Lamp", amount: 45.99, status: "pending", date: "2024-01-11" },
+  { id: "ORD-7300", customer: "Brienne of Tarth", product: "Backpack Travel", amount: 59.99, status: "shipped", date: "2024-01-11" },
+];
+&nbsp;
+export const categoryRevenue = [
+  { name: "Electronics", value: 49997, color: "#16a34a" },
+  { name: "Furniture", value: 44598, color: "#2563eb" },
+  { name: "Sports", value: 20379, color: "#f59e0b" },
+  { name: "Accessories", value: 10508, color: "#8b5cf6" },
+  { name: "Kitchen", value: 18999, color: "#ef4444" },
+  { name: "Home", value: 9597, color: "#06b6d4" },
+];
+&nbsp;
+export const salesTrend = [
+  { month: "Jul", orders: 120, revenue: 14500 },
+  { month: "Aug", orders: 145, revenue: 17800 },
+  { month: "Sep", orders: 132, revenue: 16200 },
+  { month: "Oct", orders: 168, revenue: 20400 },
+  { month: "Nov", orders: 195, revenue: 24100 },
+  { month: "Dec", orders: 220, revenue: 28900 },
+  { month: "Jan", orders: 188, revenue: 23200 },
+];
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-25T06:20:44.698Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

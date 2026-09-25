@@ -1,34 +1,43 @@
-import { type ColumnDef } from "@tanstack/react-table";
-import { Header } from "@/components/Header";
-import { DataTable } from "@/components/DataTable";
-import { mockDataContacts } from "@/data/mock-data";
+import { useMemo } from "react";
+import type { LegacyColumnDef } from "@tanstack/react-table/legacy";
+import { useTranslation } from "react-i18next";
+import { ListPage } from "@/components/ListPage";
+import { getContacts } from "@/services";
 import type { Contact } from "@/types";
 
-const columns: ColumnDef<Contact, unknown>[] = [
-  { accessorKey: "id", header: "ID" },
-  { accessorKey: "registrarId", header: "Registrar ID" },
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
-  },
-  {
-    accessorKey: "age",
-    header: "Age",
-    cell: ({ row }) => <span>{row.original.age}</span>,
-  },
-  { accessorKey: "phone", header: "Phone Number" },
-  { accessorKey: "email", header: "Email" },
-  { accessorKey: "address", header: "Address" },
-  { accessorKey: "city", header: "City" },
-  { accessorKey: "zipCode", header: "Zip Code" },
-];
-
 export default function ContactsPage() {
+  const { t } = useTranslation();
+
+  const columns = useMemo<LegacyColumnDef<Contact, unknown>[]>(
+    () => [
+      { accessorKey: "id", header: t("ID") },
+      { accessorKey: "registrarId", header: t("Registrar ID") },
+      {
+        accessorKey: "name",
+        header: t("Name"),
+        cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
+      },
+      {
+        accessorKey: "age",
+        header: t("Age"),
+        cell: ({ row }) => <span>{row.original.age}</span>,
+      },
+      { accessorKey: "phone", header: t("Phone Number") },
+      { accessorKey: "email", header: t("Email") },
+      { accessorKey: "address", header: t("Address") },
+      { accessorKey: "city", header: t("City") },
+      { accessorKey: "zipCode", header: t("Zip Code") },
+    ],
+    [t]
+  );
+
   return (
-    <div className="space-y-6">
-      <Header title="CONTACTS" subtitle="List of Contacts for Future Reference" />
-      <DataTable columns={columns} data={mockDataContacts} searchColumn="name" searchPlaceholder="Search by name..." />
-    </div>
+    <ListPage
+      subtitle={t("List of Contacts for Future Reference")}
+      loader={getContacts}
+      columns={columns}
+      searchColumn="name"
+      searchPlaceholder={t("Search by name...")}
+    />
   );
 }

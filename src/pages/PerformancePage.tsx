@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { RadarChartComponent } from "@/components/charts/RadarChart";
@@ -57,9 +58,10 @@ const stackedData: StackedAreaDataItem[] = [
 ];
 
 export default function PerformancePage() {
+  const { t } = useTranslation();
   return (
     <div className="space-y-6 min-w-0">
-      <Header title="PERFORMANCE" subtitle="Track team skills, metrics, and comparative analysis" />
+      <Header subtitle={t("Track team skills, metrics, and comparative analysis")} />
 
       {/* Gauge Row */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -89,19 +91,15 @@ export default function PerformancePage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Team Skills Radar</CardTitle>
+            <CardTitle className="text-lg">{t("Team Skills Radar")}</CardTitle>
           </CardHeader>
           <CardContent className="h-[350px]">
-            <RadarChartComponent
-              data={radarData}
-              label1="Actual"
-              label2="Target"
-            />
+            <RadarChartComponent data={radarData} label1="Actual" label2="Target" />
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Effort vs Impact</CardTitle>
+            <CardTitle className="text-lg">{t("Effort vs Impact")}</CardTitle>
           </CardHeader>
           <CardContent className="h-[350px]">
             <ScatterChartComponent
@@ -119,7 +117,7 @@ export default function PerformancePage() {
       {/* Stacked Area */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Cumulative Performance Metrics</CardTitle>
+          <CardTitle className="text-lg">{t("Cumulative Performance Metrics")}</CardTitle>
         </CardHeader>
         <CardContent className="h-[350px]">
           <StackedAreaChart

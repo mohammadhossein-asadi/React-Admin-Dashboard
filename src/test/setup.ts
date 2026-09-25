@@ -1,4 +1,5 @@
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/vitest";
+import "@/i18n";
 
 // Mock ResizeObserver for Recharts in jsdom
 class ResizeObserverMock {
@@ -7,6 +8,11 @@ class ResizeObserverMock {
   disconnect() {}
 }
 window.ResizeObserver = ResizeObserverMock as unknown as typeof ResizeObserver;
+
+// Mock scrollIntoView (not implemented in jsdom)
+if (!Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = () => {};
+}
 
 // Mock localStorage for jsdom environment
 const localStorageMock = (() => {

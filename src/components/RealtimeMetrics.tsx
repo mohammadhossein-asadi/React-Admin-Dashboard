@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, DollarSign, ShoppingCart, Server } from "lucide-react";
 
@@ -19,6 +20,7 @@ const iconMap = {
 };
 
 export function RealtimeMetrics({ metrics }: { metrics: Metric[] }) {
+  const { t } = useTranslation();
   const [values, setValues] = useState(metrics.map((m) => m.value));
 
   useEffect(() => {
@@ -59,7 +61,7 @@ export function RealtimeMetrics({ metrics }: { metrics: Metric[] }) {
                   {values[index]?.toLocaleString() ?? metric.value}
                   {metric.suffix || ""}
                 </p>
-                <p className="text-sm text-muted-foreground">{metric.label}</p>
+                <p className="text-sm text-muted-foreground">{t(metric.label)}</p>
               </div>
             </CardContent>
           </Card>

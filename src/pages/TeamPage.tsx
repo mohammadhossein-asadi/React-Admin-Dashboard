@@ -1,53 +1,67 @@
-import { type ColumnDef } from "@tanstack/react-table";
-import { Header } from "@/components/Header";
-import { DataTable } from "@/components/DataTable";
+import { useMemo } from "react";
+import type { LegacyColumnDef } from "@tanstack/react-table/legacy";
+import { useTranslation } from "react-i18next";
+import { ListPage } from "@/components/ListPage";
 import { Badge } from "@/components/ui/badge";
-import { mockDataTeam } from "@/data/mock-data";
+import { getTeam } from "@/services";
 import type { TeamMember } from "@/types";
 import { Shield, ShieldCheck, ShieldAlert } from "lucide-react";
 
 const accessConfig = {
-  admin: { label: "Admin", variant: "success" as const, icon: ShieldCheck },
-  manager: { label: "Manager", variant: "secondary" as const, icon: Shield },
-  user: { label: "User", variant: "outline" as const, icon: ShieldAlert },
+  admin: { variant: "success" as const, icon: ShieldCheck },
+  manager: { variant: "secondary" as const, icon: Shield },
+  user: { variant: "outline" as const, icon: ShieldAlert },
 };
 
-const columns: ColumnDef<TeamMember, unknown>[] = [
-  { accessorKey: "id", header: "ID" },
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
-  },
-  {
-    accessorKey: "age",
-    header: "Age",
-    cell: ({ row }) => <span>{row.original.age}</span>,
-  },
-  { accessorKey: "phone", header: "Phone" },
-  { accessorKey: "email", header: "Email" },
-  {
-    accessorKey: "access",
-    header: "Access Level",
-    cell: ({ row }) => {
-      const access = row.original.access;
-      const config = accessConfig[access];
-      const Icon = config.icon;
-      return (
-        <Badge variant={config.variant} className="flex w-fit items-center gap-1">
-          <Icon className="h-3 w-3" />
-          {config.label}
-        </Badge>
-      );
-    },
-  },
-];
-
 export default function TeamPage() {
+  const { t } = useTranslation();
+  const accessLabels: Record<TeamMember["access"], string> = {
+    admin: t("Admin"),
+    manager: t("Manager"),
+    user: t("User"),
+  };
+
+  const columns = useMemo<LegacyColumnDef<TeamMember, unknown>[]>(
+    () => [
+      { accessorKey: "id", header: t("ID") },
+      {
+        accessorKey: "name",
+        header: t("Name"),
+        cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
+      },
+      {
+        accessorKey: "age",
+        header: t("Age"),
+        cell: ({ row }) => <span>{row.original.age}</span>,
+      },
+      { accessorKey: "phone", header: t("Phone") },
+      { accessorKey: "email", header: t("Email") },
+      {
+        accessorKey: "access",
+        header: t("Access Level"),
+        cell: ({ row }) => {
+          const access = row.original.access;
+          const config = accessConfig[access];
+          const Icon = config.icon;
+          return (
+            <Badge variant={config.variant} className="flex w-fit items-center gap-1">
+              <Icon className="h-3 w-3" />
+              {accessLabels[access]}
+            </Badge>
+          );
+        },
+      },
+    ],
+    [t]
+  );
+
   return (
-    <div className="space-y-6">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
-      <DataTable columns={columns} data={mockDataTeam} searchColumn="name" searchPlaceholder="Search by name..." />
-    </div>
+    <ListPage
+      subtitle={t("Managing the Team Members")}
+      loader={getTeam}
+      columns={columns}
+      searchColumn="name"
+      searchPlaceholder={t("Search by name...")}
+    />
   );
 }

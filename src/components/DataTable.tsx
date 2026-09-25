@@ -1,33 +1,46 @@
 import {
-  useReactTable,
+  flexRender,
+  type RowData,
+  type SortingState,
+  type ColumnFiltersState,
+} from "@tanstack/react-table";
+import {
+  useLegacyTable,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  flexRender,
-  type ColumnDef,
-  type SortingState,
-  type ColumnFiltersState,
-} from "@tanstack/react-table";
+  type LegacyColumnDef,
+} from "@tanstack/react-table/legacy";
 import { useState } from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useTranslation } from "react-i18next";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ChevronLeft, ChevronRight, ArrowUpDown, Search } from "lucide-react";
 
-interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[];
+interface DataTableProps<TData extends RowData> {
+  columns: LegacyColumnDef<TData, unknown>[];
   data: TData[];
   searchPlaceholder?: string;
   searchColumn?: string;
 }
 
-export function DataTable<TData, TValue>({
+export function DataTable<TData extends RowData>({
   columns,
   data,
-  searchPlaceholder = "Search...",
+  searchPlaceholder,
   searchColumn,
-}: DataTableProps<TData, TValue>) {
+}: DataTableProps<TData>) {
+  const { t } = useTranslation();
+  const resolvedPlaceholder = searchPlaceholder ?? t("Search...");
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [pagination, setPagination] = useState({
@@ -35,7 +48,7 @@ export function DataTable<TData, TValue>({
     pageSize: 10,
   });
 
-  const table = useReactTable({
+  const table = useLegacyTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
@@ -57,9 +70,13 @@ export function DataTable<TData, TValue>({
       {/* Search */}
       {searchColumn && (
         <div className="relative max-w-sm">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Search
+            className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+            aria-hidden="true"
+          />
           <Input
-            placeholder={searchPlaceholder}
+            placeholder={resolvedPlaceholder}
+            aria-label={resolvedPlaceholder}
             value={(table.getColumn(searchColumn)?.getFilterValue() as string) ?? ""}
             onChange={(e) => table.getColumn(searchColumn)?.setFilterValue(e.target.value)}
             className="pl-9"
@@ -73,21 +90,47 @@ export function DataTable<TData, TValue>({
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id}>
-                    {header.isPlaceholder ? null : (
-                      <div
-                        className={header.column.getCanSort() ? "flex cursor-pointer select-none items-center gap-1" : ""}
-                        onClick={header.column.getToggleSortingHandler()}
-                      >
-                        {flexRender(header.column.columnDef.header, header.getContext())}
-                        {header.column.getCanSort() && (
-                          <ArrowUpDown className="h-3 w-3" />
-                        )}
-                      </div>
-                    )}
-                  </TableHead>
-                ))}
+                {headerGroup.headers.map((header) => {
+                  const canSort = header.column.getCanSort();
+                  const sorted = header.column.getIsSorted();
+                  return (
+                    <TableHead
+                      key={header.id}
+                      aria-sort={
+                        canSort
+                          ? sorted === "asc"
+                            ? "ascending"
+                            : sorted === "desc"
+                              ? "descending"
+                              : "none"
+                          : undefined
+                      }
+                    >
+                      {header.isPlaceholder ? null : (
+                        <div
+                          role={canSort ? "button" : undefined}
+                          tabIndex={canSort ? 0 : undefined}
+                          className={
+                            canSort
+                              ? "flex cursor-pointer select-none items-center gap-1 focus-visible:outline-2 focus-visible:outline-ring"
+                              : ""
+                          }
+                          onClick={header.column.getToggleSortingHandler()}
+                          onKeyDown={(e) => {
+                            if (!canSort) return;
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              header.column.getToggleSortingHandler()?.(e);
+                            }
+                          }}
+                        >
+                          {flexRender(header.column.columnDef.header, header.getContext())}
+                          {canSort && <ArrowUpDown className="h-3 w-3" aria-hidden="true" />}
+                        </div>
+                      )}
+                    </TableHead>
+                  );
+                })}
               </TableRow>
             ))}
           </TableHeader>
@@ -105,7 +148,7 @@ export function DataTable<TData, TValue>({
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  No results.
+                  {t("No results.")}
                 </TableCell>
               </TableRow>
             )}
@@ -115,13 +158,19 @@ export function DataTable<TData, TValue>({
 
       {/* Pagination */}
       <div className="flex items-center justify-between">
-        <p className="text-sm text-muted-foreground">
-          Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1} to{" "}
-          {Math.min(
-            (table.getState().pagination.pageIndex + 1) * table.getState().pagination.pageSize,
-            table.getFilteredRowModel().rows.length
-          )}{" "}
-          of {table.getFilteredRowModel().rows.length} results
+        <p className="text-sm text-muted-foreground" aria-live="polite">
+          {table.getFilteredRowModel().rows.length === 0
+            ? t("Showing 0 results")
+            : t("Showing {{from}} to {{to}} of {{total}} results", {
+                from:
+                  table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1,
+                to: Math.min(
+                  (table.getState().pagination.pageIndex + 1) *
+                    table.getState().pagination.pageSize,
+                  table.getFilteredRowModel().rows.length
+                ),
+                total: table.getFilteredRowModel().rows.length,
+              })}
         </p>
         <div className="flex items-center gap-2">
           <Button
@@ -129,19 +178,24 @@ export function DataTable<TData, TValue>({
             size="sm"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
+            aria-label={t("Previous page")}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4" aria-hidden="true" />
           </Button>
           <span className="text-sm">
-            Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+            {t("Page {{page}} of {{pages}}", {
+              page: table.getState().pagination.pageIndex + 1,
+              pages: Math.max(table.getPageCount(), 1),
+            })}
           </span>
           <Button
             variant="outline"
             size="sm"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
+            aria-label={t("Next page")}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-4 w-4" aria-hidden="true" />
           </Button>
         </div>
       </div>

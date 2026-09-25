@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1790317244907" clover="3.2.0">
+  <project timestamp="1790317244907" name="All files">
+    <metrics statements="1019" coveredstatements="888" conditionals="596" coveredconditionals="451" methods="392" coveredmethods="311" elements="2007" coveredelements="1650" complexity="0" loc="1019" ncloc="1019" packages="13" files="98" classes="98"/>
+    <package name="src">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="App.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\App.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="20" type="stmt"/>
+        <line num="18" count="20" type="stmt"/>
+        <line num="23" count="380" type="stmt"/>
+        <line num="34" count="20" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="209" coveredstatements="182" conditionals="215" coveredconditionals="181" methods="87" coveredmethods="70"/>
+      <file name="ComparisonTable.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ComparisonTable.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="37" count="8" type="stmt"/>
+      </file>
+      <file name="DataState.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\DataState.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="8" count="42" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+      <file name="DataTable.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\DataTable.tsx">
+        <metrics statements="18" coveredstatements="12" conditionals="31" coveredconditionals="18" methods="9" coveredmethods="6"/>
+        <line num="34" count="17" type="stmt"/>
+        <line num="35" count="17" type="stmt"/>
+        <line num="36" count="17" type="stmt"/>
+        <line num="41" count="17" type="stmt"/>
+        <line num="58" count="17" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="79" count="17" type="stmt"/>
+        <line num="81" count="57" type="stmt"/>
+        <line num="82" count="57" type="stmt"/>
+        <line num="83" count="57" type="stmt"/>
+        <line num="103" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="104" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="125" count="53" type="stmt"/>
+        <line num="127" count="275" type="stmt"/>
+        <line num="160" count="0" type="stmt"/>
+        <line num="172" count="0" type="stmt"/>
+      </file>
+      <file name="ErrorBoundary.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ErrorBoundary.tsx">
+        <metrics statements="11" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="5"/>
+        <line num="17" count="26" type="stmt"/>
+        <line num="18" count="26" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="68" count="26" type="stmt"/>
+      </file>
+      <file name="GoalTracker.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\GoalTracker.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="14" coveredconditionals="11" methods="2" coveredmethods="2"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+      </file>
+      <file name="Header.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\Header.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="40" type="stmt"/>
+        <line num="11" count="40" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="40" type="stmt"/>
+      </file>
+      <file name="KanbanBoard.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\KanbanBoard.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="13" count="72" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="72" type="stmt"/>
+        <line num="24" count="215" type="stmt"/>
+      </file>
+      <file name="KanbanCard.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\KanbanCard.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="65" type="stmt"/>
+        <line num="21" count="65" type="stmt"/>
+        <line num="24" count="65" type="stmt"/>
+        <line num="46" count="125" type="stmt"/>
+      </file>
+      <file name="KanbanColumn.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\KanbanColumn.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="22" type="stmt"/>
+        <line num="22" count="22" type="stmt"/>
+        <line num="31" count="73" type="stmt"/>
+      </file>
+      <file name="ListPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ListPage.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="25" count="14" type="stmt"/>
+        <line num="27" count="14" type="stmt"/>
+      </file>
+      <file name="NotificationsPanel.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\NotificationsPanel.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="22" coveredconditionals="21" methods="4" coveredmethods="4"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="69" count="72" type="stmt"/>
+        <line num="70" count="72" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+      </file>
+      <file name="PageHeader.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\PageHeader.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="86" type="stmt"/>
+      </file>
+      <file name="ProgressCircle.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ProgressCircle.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+      </file>
+      <file name="RealtimeMetrics.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\RealtimeMetrics.tsx">
+        <metrics statements="12" coveredstatements="8" conditionals="10" coveredconditionals="9" methods="8" coveredmethods="5"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+      </file>
+      <file name="RecentActivity.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\RecentActivity.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+      <file name="RouteError.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\RouteError.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+      </file>
+      <file name="SearchCommand.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\SearchCommand.tsx">
+        <metrics statements="74" coveredstatements="63" conditionals="51" coveredconditionals="41" methods="19" coveredmethods="15"/>
+        <line num="21" count="76" type="stmt"/>
+        <line num="31" count="167" type="stmt"/>
+        <line num="32" count="167" type="stmt"/>
+        <line num="33" count="167" type="stmt"/>
+        <line num="34" count="167" type="stmt"/>
+        <line num="35" count="167" type="stmt"/>
+        <line num="36" count="167" type="stmt"/>
+        <line num="38" count="167" type="stmt"/>
+        <line num="39" count="153" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="74" type="stmt"/>
+        <line num="42" count="74" type="stmt"/>
+        <line num="44" count="74" type="stmt"/>
+        <line num="45" count="1406" type="stmt"/>
+        <line num="46" count="1406" type="stmt"/>
+        <line num="47" count="1406" type="cond" truecount="4" falsecount="0"/>
+        <line num="48" count="175" type="stmt"/>
+        <line num="52" count="74" type="stmt"/>
+        <line num="53" count="1036" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="68" type="stmt"/>
+        <line num="68" count="74" type="stmt"/>
+        <line num="69" count="1184" type="cond" truecount="2" falsecount="0"/>
+        <line num="74" count="107" type="stmt"/>
+        <line num="85" count="74" type="stmt"/>
+        <line num="86" count="1184" type="cond" truecount="2" falsecount="0"/>
+        <line num="90" count="86" type="stmt"/>
+        <line num="101" count="74" type="stmt"/>
+        <line num="104" count="167" type="stmt"/>
+        <line num="105" count="36" type="cond" truecount="4" falsecount="0"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="110" count="167" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+        <line num="120" count="167" type="stmt"/>
+        <line num="122" count="76" type="cond" truecount="2" falsecount="0"/>
+        <line num="123" count="58" type="cond" truecount="2" falsecount="2"/>
+        <line num="125" count="1" type="stmt"/>
+        <line num="126" count="1" type="stmt"/>
+        <line num="127" count="1" type="stmt"/>
+        <line num="128" count="1" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="134" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="135" count="1" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+        <line num="138" count="1" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="142" count="0" type="stmt"/>
+        <line num="148" count="167" type="stmt"/>
+        <line num="149" count="153" type="stmt"/>
+        <line num="150" count="153" type="stmt"/>
+        <line num="151" count="164" type="stmt"/>
+        <line num="153" count="153" type="stmt"/>
+        <line num="156" count="167" type="stmt"/>
+        <line num="160" count="8" type="stmt"/>
+        <line num="161" count="8" type="stmt"/>
+        <line num="180" count="78" type="stmt"/>
+        <line num="181" count="78" type="stmt"/>
+        <line num="182" count="78" type="stmt"/>
+        <line num="185" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="194" count="8" type="stmt"/>
+        <line num="209" count="74" type="stmt"/>
+        <line num="219" count="165" type="stmt"/>
+        <line num="220" count="165" type="stmt"/>
+        <line num="221" count="165" type="stmt"/>
+        <line num="230" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="231" count="0" type="stmt"/>
+        <line num="232" count="0" type="stmt"/>
+        <line num="239" count="0" type="stmt"/>
+        <line num="240" count="0" type="stmt"/>
+      </file>
+      <file name="Sidebar.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\Sidebar.tsx">
+        <metrics statements="19" coveredstatements="19" conditionals="27" coveredconditionals="26" methods="8" coveredmethods="7"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="70" type="stmt"/>
+        <line num="18" count="70" type="stmt"/>
+        <line num="19" count="70" type="stmt"/>
+        <line num="21" count="70" type="stmt"/>
+        <line num="23" count="70" type="stmt"/>
+        <line num="65" count="280" type="stmt"/>
+        <line num="72" count="1330" type="stmt"/>
+        <line num="73" count="1330" type="stmt"/>
+        <line num="75" count="1330" type="stmt"/>
+        <line num="112" count="70" type="stmt"/>
+        <line num="114" count="70" type="stmt"/>
+        <line num="115" count="2" type="stmt"/>
+        <line num="116" count="2" type="stmt"/>
+        <line num="117" count="2" type="stmt"/>
+        <line num="118" count="2" type="stmt"/>
+        <line num="123" count="70" type="cond" truecount="2" falsecount="0"/>
+        <line num="124" count="1" type="stmt"/>
+        <line num="127" count="69" type="stmt"/>
+      </file>
+      <file name="StatBox.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\StatBox.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+      </file>
+      <file name="TeamPerformanceGrid.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\TeamPerformanceGrid.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+      </file>
+      <file name="TopBar.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\TopBar.tsx">
+        <metrics statements="12" coveredstatements="9" conditionals="14" coveredconditionals="12" methods="6" coveredmethods="3"/>
+        <line num="27" count="73" type="stmt"/>
+        <line num="28" count="73" type="stmt"/>
+        <line num="29" count="73" type="stmt"/>
+        <line num="30" count="73" type="stmt"/>
+        <line num="31" count="73" type="stmt"/>
+        <line num="33" count="73" type="stmt"/>
+        <line num="35" count="73" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="133" count="0" type="stmt"/>
+        <line num="140" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.charts">
+      <metrics statements="74" coveredstatements="72" conditionals="102" coveredconditionals="68" methods="17" coveredmethods="17"/>
+      <file name="AreaChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\AreaChart.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="12" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+      <file name="BarChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\BarChart.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="9" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+      <file name="GaugeChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\GaugeChart.tsx">
+        <metrics statements="29" coveredstatements="27" conditionals="26" coveredconditionals="18" methods="3" coveredmethods="3"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="38" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="40" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="8" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="52" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="4" type="stmt"/>
+      </file>
+      <file name="GeographyChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\GeographyChart.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="9" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="47" count="20" type="stmt"/>
+      </file>
+      <file name="LineChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\LineChart.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="9" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+      <file name="PieChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\PieChart.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="32" count="12" type="stmt"/>
+      </file>
+      <file name="RadarChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\RadarChart.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+      <file name="ScatterChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\ScatterChart.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="12" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+      <file name="Sparkline.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\Sparkline.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="15" count="152" type="stmt"/>
+        <line num="17" count="20" type="stmt"/>
+      </file>
+      <file name="StackedAreaChart.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\charts\StackedAreaChart.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ui">
+      <metrics statements="179" coveredstatements="164" conditionals="16" coveredconditionals="11" methods="52" coveredmethods="37"/>
+      <file name="accordion.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\accordion.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+      </file>
+      <file name="avatar.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\avatar.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="9" count="173" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="33" count="173" type="stmt"/>
+        <line num="39" count="5" type="stmt"/>
+      </file>
+      <file name="badge.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\badge.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="9" count="114" type="stmt"/>
+        <line num="18" count="114" type="stmt"/>
+      </file>
+      <file name="button.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\button.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="14" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+        <line num="39" count="1091" type="stmt"/>
+        <line num="48" count="14" type="stmt"/>
+      </file>
+      <file name="card.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\card.tsx">
+        <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="6" count="260" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="17" count="188" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="24" count="188" type="stmt"/>
+        <line num="33" count="8" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="39" count="161" type="stmt"/>
+        <line num="41" count="8" type="stmt"/>
+        <line num="43" count="8" type="stmt"/>
+        <line num="45" count="260" type="stmt"/>
+        <line num="48" count="8" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="8" type="stmt"/>
+      </file>
+      <file name="dialog.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\dialog.tsx">
+        <metrics statements="22" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="70" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="30" count="76" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="65" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="65" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="64" count="65" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+      </file>
+      <file name="dropdown-menu.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\dropdown-menu.tsx">
+        <metrics statements="33" coveredstatements="28" conditionals="7" coveredconditionals="3" methods="9" coveredmethods="4"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="51" count="73" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="69" count="9" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
+        <line num="81" count="3" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="102" count="3" type="stmt"/>
+        <line num="104" count="3" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="124" count="3" type="stmt"/>
+        <line num="126" count="3" type="stmt"/>
+        <line num="130" count="3" type="stmt"/>
+        <line num="136" count="3" type="stmt"/>
+        <line num="138" count="3" type="stmt"/>
+        <line num="142" count="6" type="stmt"/>
+        <line num="148" count="3" type="stmt"/>
+        <line num="150" count="3" type="stmt"/>
+        <line num="151" count="0" type="stmt"/>
+        <line num="153" count="3" type="stmt"/>
+      </file>
+      <file name="input.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\input.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="1174" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+      </file>
+      <file name="label.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\label.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="14" count="991" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+      </file>
+      <file name="popover.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\popover.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="12" count="240" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+      </file>
+      <file name="scroll-area.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\scroll-area.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="70" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+      </file>
+      <file name="separator.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\separator.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="9" count="373" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+      </file>
+      <file name="sheet.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\sheet.tsx">
+        <metrics statements="23" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="32" count="62" type="stmt"/>
+        <line num="39" count="62" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="97" count="2" type="stmt"/>
+      </file>
+      <file name="table.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\table.tsx">
+        <metrics statements="24" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="21" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="17" count="21" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="25" count="21" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="43" count="111" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="56" count="77" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+        <line num="71" count="461" type="stmt"/>
+        <line num="77" count="3" type="stmt"/>
+        <line num="79" count="3" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="3" type="stmt"/>
+      </file>
+      <file name="tabs.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\tabs.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="26" count="65" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="65" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+      </file>
+      <file name="tooltip.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\components\ui\tooltip.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="13" count="165" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.contexts">
+      <metrics statements="113" coveredstatements="109" conditionals="32" coveredconditionals="23" methods="50" coveredmethods="50"/>
+      <file name="auth-context.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\contexts\auth-context.tsx">
+        <metrics statements="25" coveredstatements="24" conditionals="6" coveredconditionals="4" methods="11" coveredmethods="11"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="46" count="51" type="stmt"/>
+        <line num="47" count="51" type="stmt"/>
+        <line num="48" count="51" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="21" type="stmt"/>
+        <line num="50" count="21" type="stmt"/>
+        <line num="58" count="30" type="stmt"/>
+        <line num="62" count="59" type="stmt"/>
+        <line num="64" count="59" type="stmt"/>
+        <line num="65" count="59" type="stmt"/>
+        <line num="68" count="59" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="72" count="59" type="stmt"/>
+        <line num="73" count="3" type="stmt"/>
+        <line num="76" count="59" type="stmt"/>
+        <line num="77" count="3" type="stmt"/>
+        <line num="80" count="59" type="stmt"/>
+        <line num="81" count="59" type="stmt"/>
+        <line num="85" count="59" type="stmt"/>
+        <line num="89" count="374" type="stmt"/>
+        <line num="90" count="374" type="cond" truecount="1" falsecount="1"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="93" count="374" type="stmt"/>
+      </file>
+      <file name="notifications-context.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\contexts\notifications-context.tsx">
+        <metrics statements="33" coveredstatements="32" conditionals="12" coveredconditionals="8" methods="18" coveredmethods="18"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="30" count="41" type="stmt"/>
+        <line num="31" count="41" type="stmt"/>
+        <line num="32" count="41" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="22" type="stmt"/>
+        <line num="34" count="22" type="stmt"/>
+        <line num="42" count="19" type="stmt"/>
+        <line num="46" count="48" type="stmt"/>
+        <line num="48" count="48" type="stmt"/>
+        <line num="49" count="48" type="stmt"/>
+        <line num="52" count="48" type="stmt"/>
+        <line num="54" count="48" type="stmt"/>
+        <line num="55" count="384" type="stmt"/>
+        <line num="56" count="360" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="48" type="stmt"/>
+        <line num="61" count="360" type="stmt"/>
+        <line num="65" count="48" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="67" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="71" count="48" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="74" count="16" type="stmt"/>
+        <line num="78" count="48" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="81" count="16" type="stmt"/>
+        <line num="85" count="48" type="stmt"/>
+        <line num="86" count="48" type="stmt"/>
+        <line num="90" count="48" type="stmt"/>
+        <line num="96" count="94" type="stmt"/>
+        <line num="97" count="94" type="cond" truecount="1" falsecount="1"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="100" count="94" type="stmt"/>
+      </file>
+      <file name="settings-context.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\contexts\settings-context.tsx">
+        <metrics statements="39" coveredstatements="38" conditionals="8" coveredconditionals="6" methods="15" coveredmethods="15"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="64" count="28" type="stmt"/>
+        <line num="65" count="28" type="stmt"/>
+        <line num="66" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="67" count="19" type="stmt"/>
+        <line num="68" count="19" type="stmt"/>
+        <line num="77" count="9" type="stmt"/>
+        <line num="81" count="35" type="stmt"/>
+        <line num="82" count="35" type="stmt"/>
+        <line num="84" count="35" type="stmt"/>
+        <line num="85" count="34" type="stmt"/>
+        <line num="88" count="35" type="stmt"/>
+        <line num="89" count="30" type="stmt"/>
+        <line num="90" count="30" type="stmt"/>
+        <line num="91" count="30" type="stmt"/>
+        <line num="92" count="30" type="stmt"/>
+        <line num="93" count="30" type="stmt"/>
+        <line num="99" count="35" type="stmt"/>
+        <line num="100" count="30" type="stmt"/>
+        <line num="101" count="30" type="cond" truecount="1" falsecount="1"/>
+        <line num="102" count="30" type="stmt"/>
+        <line num="105" count="35" type="stmt"/>
+        <line num="106" count="1" type="stmt"/>
+        <line num="109" count="35" type="stmt"/>
+        <line num="110" count="2" type="stmt"/>
+        <line num="113" count="35" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+        <line num="120" count="35" type="stmt"/>
+        <line num="121" count="2" type="stmt"/>
+        <line num="124" count="35" type="stmt"/>
+        <line num="125" count="34" type="stmt"/>
+        <line num="129" count="35" type="stmt"/>
+        <line num="133" count="15" type="stmt"/>
+        <line num="134" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="137" count="15" type="stmt"/>
+      </file>
+      <file name="theme-context.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\contexts\theme-context.tsx">
+        <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="13" count="47" type="stmt"/>
+        <line num="14" count="42" type="stmt"/>
+        <line num="15" count="42" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="47" type="stmt"/>
+        <line num="19" count="47" type="stmt"/>
+        <line num="20" count="47" type="stmt"/>
+        <line num="21" count="47" type="stmt"/>
+        <line num="22" count="47" type="stmt"/>
+        <line num="25" count="47" type="stmt"/>
+        <line num="26" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="47" type="stmt"/>
+        <line num="33" count="142" type="stmt"/>
+        <line num="34" count="142" type="cond" truecount="1" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="142" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.data">
+      <metrics statements="33" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="analytics-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\analytics-data.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+      </file>
+      <file name="dashboard-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\dashboard-data.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="ecommerce-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\ecommerce-data.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+      <file name="email-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\email-data.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="kanban-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\kanban-data.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="mock-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\mock-data.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="58" count="8" type="stmt"/>
+        <line num="77" count="8" type="stmt"/>
+        <line num="90" count="8" type="stmt"/>
+        <line num="103" count="8" type="stmt"/>
+        <line num="118" count="8" type="stmt"/>
+        <line num="127" count="8" type="stmt"/>
+        <line num="142" count="8" type="stmt"/>
+        <line num="150" count="8" type="stmt"/>
+        <line num="159" count="8" type="stmt"/>
+      </file>
+      <file name="notifications.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\notifications.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="5" type="stmt"/>
+      </file>
+      <file name="social-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\social-data.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+      </file>
+      <file name="tickets-data.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\data\tickets-data.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="123" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.hooks">
+      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
+      <file name="useAsyncData.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\hooks\useAsyncData.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
+        <line num="10" count="29" type="stmt"/>
+        <line num="11" count="29" type="stmt"/>
+        <line num="17" count="29" type="stmt"/>
+        <line num="19" count="29" type="stmt"/>
+        <line num="20" count="15" type="stmt"/>
+        <line num="21" count="15" type="stmt"/>
+        <line num="23" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="34" count="15" type="stmt"/>
+        <line num="35" count="15" type="stmt"/>
+        <line num="39" count="29" type="stmt"/>
+        <line num="41" count="29" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.i18n">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\i18n\index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="27" type="stmt"/>
+        <line num="6" count="27" type="stmt"/>
+        <line num="8" count="27" type="stmt"/>
+      </file>
+      <file name="resources.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\i18n\resources.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="27" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layouts">
+      <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <file name="AppLayout.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\layouts\AppLayout.tsx">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="32" count="63" type="stmt"/>
+        <line num="33" count="63" type="stmt"/>
+        <line num="35" count="63" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="62" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.lib">
+      <metrics statements="45" coveredstatements="45" conditionals="13" coveredconditionals="13" methods="29" coveredmethods="29"/>
+      <file name="chart-colors.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\lib\chart-colors.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+      <file name="constants.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\lib\constants.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="7" type="stmt"/>
+      </file>
+      <file name="kanban-drag.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\lib\kanban-drag.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+      </file>
+      <file name="routes.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\lib\routes.ts">
+        <metrics statements="26" coveredstatements="26" conditionals="1" coveredconditionals="1" methods="24" coveredmethods="24"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="60" count="386" type="stmt"/>
+        <line num="64" count="40" type="stmt"/>
+        <line num="65" count="40" type="stmt"/>
+        <line num="69" count="70" type="stmt"/>
+        <line num="70" count="1330" type="stmt"/>
+        <line num="71" count="1330" type="stmt"/>
+      </file>
+      <file name="utils.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\lib\utils.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="8951" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="233" coveredstatements="168" conditionals="162" coveredconditionals="105" methods="112" coveredmethods="70"/>
+      <file name="AnalyticsPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\AnalyticsPage.tsx">
+        <metrics statements="15" coveredstatements="12" conditionals="11" coveredconditionals="8" methods="7" coveredmethods="6"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="2"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="66" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="134" count="5" type="stmt"/>
+        <line num="154" count="5" type="stmt"/>
+      </file>
+      <file name="BarChartPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\BarChartPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="CalendarPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\CalendarPage.tsx">
+        <metrics statements="33" coveredstatements="13" conditionals="12" coveredconditionals="4" methods="11" coveredmethods="3"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="137" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="142" count="0" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+      </file>
+      <file name="ContactsPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\ContactsPage.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+      <file name="DashboardPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\DashboardPage.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="4"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="112" count="10" type="stmt"/>
+        <line num="149" count="5" type="stmt"/>
+      </file>
+      <file name="EcommercePage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\EcommercePage.tsx">
+        <metrics statements="17" coveredstatements="15" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="9"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="12" type="stmt"/>
+        <line num="27" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="33" count="12" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="110" count="6" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+        <line num="149" count="7" type="stmt"/>
+        <line num="153" count="0" type="stmt"/>
+        <line num="176" count="12" type="stmt"/>
+        <line num="218" count="10" type="stmt"/>
+      </file>
+      <file name="EmailPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\EmailPage.tsx">
+        <metrics statements="44" coveredstatements="23" conditionals="46" coveredconditionals="28" methods="23" coveredmethods="7"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="10" type="stmt"/>
+        <line num="49" count="10" type="cond" truecount="1" falsecount="2"/>
+        <line num="52" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="10" type="stmt"/>
+        <line num="56" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="151" count="4" type="stmt"/>
+        <line num="154" count="0" type="stmt"/>
+        <line num="155" count="0" type="stmt"/>
+        <line num="186" count="0" type="stmt"/>
+        <line num="200" count="0" type="stmt"/>
+        <line num="233" count="0" type="stmt"/>
+        <line num="245" count="6" type="stmt"/>
+        <line num="247" count="0" type="stmt"/>
+        <line num="256" count="12" type="stmt"/>
+      </file>
+      <file name="FAQPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\FAQPage.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="49" count="6" type="stmt"/>
+      </file>
+      <file name="FormPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\FormPage.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="28" count="14" type="stmt"/>
+        <line num="40" count="14" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="14" type="stmt"/>
+      </file>
+      <file name="GeographyPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\GeographyPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="InvoicesPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\InvoicesPage.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="KanbanPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\KanbanPage.tsx">
+        <metrics statements="26" coveredstatements="26" conditionals="12" coveredconditionals="12" methods="9" coveredmethods="9"/>
+        <line num="20" count="71" type="stmt"/>
+        <line num="21" count="71" type="stmt"/>
+        <line num="22" count="71" type="stmt"/>
+        <line num="23" count="71" type="stmt"/>
+        <line num="24" count="71" type="stmt"/>
+        <line num="25" count="71" type="stmt"/>
+        <line num="27" count="71" type="stmt"/>
+        <line num="28" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="46" count="4" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="51" count="71" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+        <line num="60" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="80" count="28" type="stmt"/>
+        <line num="82" count="29" type="cond" truecount="2" falsecount="0"/>
+        <line num="92" count="23" type="stmt"/>
+        <line num="101" count="4" type="stmt"/>
+      </file>
+      <file name="LineChartPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\LineChartPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="NotFoundPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\NotFoundPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="PerformancePage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\PerformancePage.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+      </file>
+      <file name="PieChartPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\PieChartPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="SettingsPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\SettingsPage.tsx">
+        <metrics statements="14" coveredstatements="14" conditionals="13" coveredconditionals="12" methods="5" coveredmethods="4"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="19" count="13" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="13" type="cond" truecount="5" falsecount="0"/>
+        <line num="32" count="13" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="13" type="stmt"/>
+      </file>
+      <file name="SocialPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\SocialPage.tsx">
+        <metrics statements="18" coveredstatements="8" conditionals="12" coveredconditionals="4" methods="11" coveredmethods="4"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="75" count="6" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="126" count="5" type="stmt"/>
+        <line num="187" count="4" type="stmt"/>
+      </file>
+      <file name="TeamPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\TeamPage.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="32" count="10" type="stmt"/>
+        <line num="33" count="10" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="35" count="10" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+      <file name="TicketsPage.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\TicketsPage.tsx">
+        <metrics statements="23" coveredstatements="15" conditionals="28" coveredconditionals="10" methods="10" coveredmethods="4"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="8" type="cond" truecount="1" falsecount="2"/>
+        <line num="44" count="8" type="cond" truecount="3" falsecount="0"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="108" count="4" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="126" count="8" type="stmt"/>
+        <line num="133" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="135" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="136" count="0" type="stmt"/>
+        <line num="137" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="172" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.settings">
+      <metrics statements="89" coveredstatements="72" conditionals="38" coveredconditionals="33" methods="27" coveredmethods="21"/>
+      <file name="AccountTab.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\AccountTab.tsx">
+        <metrics statements="48" coveredstatements="48" conditionals="16" coveredconditionals="16" methods="9" coveredmethods="9"/>
+        <line num="10" count="264" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="19" count="132" type="stmt"/>
+        <line num="20" count="132" type="stmt"/>
+        <line num="21" count="132" type="stmt"/>
+        <line num="22" count="132" type="stmt"/>
+        <line num="23" count="132" type="stmt"/>
+        <line num="25" count="132" type="stmt"/>
+        <line num="26" count="132" type="stmt"/>
+        <line num="27" count="132" type="stmt"/>
+        <line num="28" count="132" type="stmt"/>
+        <line num="29" count="132" type="stmt"/>
+        <line num="31" count="132" type="stmt"/>
+        <line num="32" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="47" count="132" type="stmt"/>
+        <line num="48" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="53" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="70" count="132" type="stmt"/>
+        <line num="85" count="34" type="stmt"/>
+        <line num="94" count="17" type="stmt"/>
+        <line num="119" count="20" type="stmt"/>
+        <line num="129" count="28" type="stmt"/>
+        <line num="139" count="21" type="stmt"/>
+      </file>
+      <file name="AppearanceTab.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\AppearanceTab.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="84" count="45" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+      </file>
+      <file name="NotificationsTab.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\NotificationsTab.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="39" count="8" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+      </file>
+      <file name="ProfileTab.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\ProfileTab.tsx">
+        <metrics statements="24" coveredstatements="7" conditionals="8" coveredconditionals="3" methods="8" coveredmethods="2"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="18" count="13" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="13" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="78" count="5" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+      </file>
+      <file name="SecurityTab.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\SecurityTab.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+      <file name="Toggle.tsx" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\pages\settings\Toggle.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="10" count="21" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="14" coveredstatements="14" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+      <file name="client.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\services\client.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="6" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="12" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+      </file>
+      <file name="index.ts" path="C:\Users\MohammadHossein\Desktop\projects\React-Admin-Dashboard\src\services\index.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="6" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

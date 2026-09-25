@@ -1,32 +1,13 @@
-/// <reference types="vitest" />
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 import path from "path";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    {
-      name: "no-dep-cache",
-      configureServer(server) {
-        server.middlewares.use((req, res, next) => {
-          if (req.url?.includes("/.vite/deps/")) {
-            const orig = res.setHeader;
-            res.setHeader = function (name, value) {
-              if (typeof name === "string" && name.toLowerCase() === "cache-control") {
-                return orig.call(this, name, "no-store, no-cache, must-revalidate, max-age=0");
-              }
-              return orig.call(this, name, value);
-            };
-          }
-          next();
-        });
-      },
-    },
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
     dedupe: ["react", "react-dom"],
   },
@@ -34,10 +15,39 @@ export default defineConfig({
     port: 3000,
     strictPort: true,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (
+            id.includes("node_modules/react-dom") ||
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/scheduler") ||
+            id.includes("node_modules/react-router")
+          ) {
+            return "react-vendor";
+          }
+          if (id.includes("node_modules/@radix-ui") || id.includes("node_modules/@floating-ui")) {
+            return "ui-vendor";
+          }
+          if (id.includes("node_modules/recharts") || id.includes("node_modules/d3")) {
+            return "recharts";
+          }
+          if (id.includes("node_modules/@fullcalendar")) {
+            return "fullcalendar";
+          }
+        },
+      },
+    },
+  },
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/test/setup.ts",
-    css: true,
+    css: false,
+    pool: "vmThreads",
+    testTimeout: 20000,
+    hookTimeout: 20000,
+    exclude: ["**/e2e/**", "**/node_modules/**"],
   },
 });

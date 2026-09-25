@@ -1,5 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Header } from "@/components/Header";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqItems = [
   {
@@ -41,18 +47,17 @@ const faqItems = [
 ];
 
 export default function FAQPage() {
+  const { t } = useTranslation();
   return (
     <div className="space-y-6">
-      <Header title="FAQ" subtitle="Frequently Asked Questions Page" />
+      <Header subtitle={t("Frequently Asked Questions Page")} />
       <Accordion type="single" collapsible className="space-y-2">
         {faqItems.map((item) => (
           <AccordionItem key={item.id} value={item.id} className="rounded-lg border px-4">
             <AccordionTrigger className="text-success hover:no-underline">
-              {item.question}
+              {t(item.question)}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">
-              {item.answer}
-            </AccordionContent>
+            <AccordionContent className="text-muted-foreground">{t(item.answer)}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

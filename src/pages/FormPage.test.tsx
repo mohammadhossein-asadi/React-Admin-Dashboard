@@ -1,17 +1,25 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { MemoryRouter } from "react-router-dom";
 import FormPage from "@/pages/FormPage";
 
 describe("FormPage", () => {
+  function renderForm() {
+    return render(
+      <MemoryRouter initialEntries={["/form"]}>
+        <FormPage />
+      </MemoryRouter>
+    );
+  }
   it("renders the form header", () => {
-    render(<FormPage />);
+    renderForm();
     expect(screen.getByText("CREATE USER")).toBeInTheDocument();
     expect(screen.getByText("Create a New User Profile")).toBeInTheDocument();
   });
 
   it("renders all form fields", () => {
-    render(<FormPage />);
+    renderForm();
     expect(screen.getByLabelText("First Name")).toBeInTheDocument();
     expect(screen.getByLabelText("Last Name")).toBeInTheDocument();
     expect(screen.getByLabelText("Email")).toBeInTheDocument();
@@ -21,16 +29,16 @@ describe("FormPage", () => {
   });
 
   it("renders submit button", () => {
-    render(<FormPage />);
+    renderForm();
     expect(screen.getByRole("button", { name: "Create New User" })).toBeInTheDocument();
   });
 
   it("shows validation errors for empty required fields", async () => {
     const user = userEvent.setup();
-    render(<FormPage />);
-    
+    renderForm();
+
     await user.click(screen.getByRole("button", { name: "Create New User" }));
-    
+
     expect(screen.getByText("First name is required")).toBeInTheDocument();
     expect(screen.getByText("Last name is required")).toBeInTheDocument();
     expect(screen.getByText("Invalid email address")).toBeInTheDocument();
@@ -40,17 +48,17 @@ describe("FormPage", () => {
 
   it("shows success message after valid submission", async () => {
     const user = userEvent.setup();
-    render(<FormPage />);
-    
+    renderForm();
+
     await user.type(screen.getByLabelText("First Name"), "John");
     await user.type(screen.getByLabelText("Last Name"), "Doe");
     await user.type(screen.getByLabelText("Email"), "john@example.com");
     await user.type(screen.getByLabelText("Contact Number"), "1234567890");
     await user.type(screen.getByLabelText("Address 1"), "123 Main St");
     await user.type(screen.getByLabelText("Address 2"), "Apt 1");
-    
+
     await user.click(screen.getByRole("button", { name: "Create New User" }));
-    
+
     expect(screen.getByText("User created successfully!")).toBeInTheDocument();
   });
 });

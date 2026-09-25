@@ -4,14 +4,13 @@ import { ProgressCircle } from "@/components/ProgressCircle";
 
 describe("ProgressCircle", () => {
   it("renders with default progress", () => {
-    const { container } = render(<ProgressCircle />);
-    const svg = container.querySelector("svg");
-    expect(svg).toBeInTheDocument();
+    render(<ProgressCircle />);
+    expect(screen.getByRole("img", { name: /progress/i })).toBeInTheDocument();
   });
 
   it("renders with custom size", () => {
-    const { container } = render(<ProgressCircle size={100} />);
-    const svg = container.querySelector("svg");
+    render(<ProgressCircle size={100} />);
+    const svg = screen.getByRole("img", { name: /progress/i });
     expect(svg).toHaveAttribute("width", "100");
     expect(svg).toHaveAttribute("height", "100");
   });

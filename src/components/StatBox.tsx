@@ -13,7 +13,14 @@ interface StatBoxProps {
   sparklineData?: number[];
 }
 
-export const StatBox = memo(function StatBox({ title, subtitle, icon, progress, increase, sparklineData }: StatBoxProps) {
+export const StatBox = memo(function StatBox({
+  title,
+  subtitle,
+  icon,
+  progress,
+  increase,
+  sparklineData,
+}: StatBoxProps) {
   return (
     <Card className="overflow-hidden">
       <CardContent className="p-4">
@@ -29,7 +36,7 @@ export const StatBox = memo(function StatBox({ title, subtitle, icon, progress, 
           </div>
           <div className="flex shrink-0 items-center gap-2">
             {sparklineData && (
-              <div className="hidden w-16 sm:block">
+              <div role="img" aria-label="Trend sparkline" className="hidden w-16 sm:block">
                 <Sparkline data={sparklineData} height={28} />
               </div>
             )}
@@ -40,7 +47,12 @@ export const StatBox = memo(function StatBox({ title, subtitle, icon, progress, 
           <div className="w-16 sm:hidden">
             {sparklineData && <Sparkline data={sparklineData} height={24} />}
           </div>
-          <p className={cn("text-sm font-semibold ml-auto", increase.startsWith("+") ? "text-success" : "text-destructive")}>
+          <p
+            className={cn(
+              "text-sm font-semibold ml-auto",
+              increase.startsWith("+") ? "text-success" : "text-destructive"
+            )}
+          >
             {increase}
           </p>
         </div>

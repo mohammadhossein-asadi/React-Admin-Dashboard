@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { DataTable } from "@/components/DataTable";
-import type { ColumnDef } from "@tanstack/react-table";
+import type { LegacyColumnDef } from "@tanstack/react-table/legacy";
 
 interface TestItem {
   id: number;
@@ -10,7 +10,7 @@ interface TestItem {
   email: string;
 }
 
-const testColumns: ColumnDef<TestItem, unknown>[] = [
+const testColumns: LegacyColumnDef<TestItem, unknown>[] = [
   { accessorKey: "id", header: "ID" },
   { accessorKey: "name", header: "Name" },
   { accessorKey: "email", header: "Email" },
@@ -36,7 +36,14 @@ describe("DataTable", () => {
   });
 
   it("renders search input when searchColumn is provided", () => {
-    render(<DataTable columns={testColumns} data={testData} searchColumn="name" searchPlaceholder="Search by name" />);
+    render(
+      <DataTable
+        columns={testColumns}
+        data={testData}
+        searchColumn="name"
+        searchPlaceholder="Search by name"
+      />
+    );
     expect(screen.getByPlaceholderText("Search by name")).toBeInTheDocument();
   });
 
@@ -47,11 +54,18 @@ describe("DataTable", () => {
 
   it("filters data based on search input", async () => {
     const user = userEvent.setup();
-    render(<DataTable columns={testColumns} data={testData} searchColumn="name" searchPlaceholder="Search by name" />);
-    
+    render(
+      <DataTable
+        columns={testColumns}
+        data={testData}
+        searchColumn="name"
+        searchPlaceholder="Search by name"
+      />
+    );
+
     const searchInput = screen.getByPlaceholderText("Search by name");
     await user.type(searchInput, "Alice");
-    
+
     expect(screen.getByText("Alice Johnson")).toBeInTheDocument();
     expect(screen.queryByText("Bob Smith")).not.toBeInTheDocument();
     expect(screen.queryByText("Charlie Brown")).not.toBeInTheDocument();

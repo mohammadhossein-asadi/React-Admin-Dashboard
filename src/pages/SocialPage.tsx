@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,15 +9,14 @@ import { socialPosts, teamPerformanceData } from "@/data/social-data";
 import { Heart, MessageCircle, Share2, Send, TrendingUp, Award, Zap, Target } from "lucide-react";
 
 export default function SocialPage() {
+  const { t } = useTranslation();
   const [posts, setPosts] = useState(socialPosts);
   const [newPost, setNewPost] = useState("");
 
   const toggleLike = (id: string) => {
     setPosts((prev) =>
       prev.map((p) =>
-        p.id === id
-          ? { ...p, liked: !p.liked, likes: p.liked ? p.likes - 1 : p.likes + 1 }
-          : p
+        p.id === id ? { ...p, liked: !p.liked, likes: p.liked ? p.likes - 1 : p.likes + 1 } : p
       )
     );
   };
@@ -40,7 +40,7 @@ export default function SocialPage() {
 
   return (
     <div className="space-y-6 min-w-0">
-      <Header title="TEAM FEED" subtitle="Stay connected with your team's updates" />
+      <Header subtitle={t("Stay connected with your team's updates")} />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
         {/* Feed */}
@@ -54,7 +54,7 @@ export default function SocialPage() {
                 </Avatar>
                 <div className="flex-1">
                   <Input
-                    placeholder="Share an update with your team..."
+                    placeholder={t("Share an update with your team...")}
                     value={newPost}
                     onChange={(e) => setNewPost(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handlePost()}
@@ -62,7 +62,7 @@ export default function SocialPage() {
                   <div className="mt-2 flex justify-end">
                     <Button size="sm" onClick={handlePost} disabled={!newPost.trim()}>
                       <Send className="mr-2 h-3 w-3" />
-                      Post
+                      {t("Post")}
                     </Button>
                   </div>
                 </div>
@@ -96,7 +96,9 @@ export default function SocialPage() {
                         onClick={() => toggleLike(post.id)}
                         className="flex items-center gap-1 text-sm text-muted-foreground hover:text-destructive transition-colors"
                       >
-                        <Heart className={`h-4 w-4 ${post.liked ? "fill-destructive text-destructive" : ""}`} />
+                        <Heart
+                          className={`h-4 w-4 ${post.liked ? "fill-destructive text-destructive" : ""}`}
+                        />
                         {post.likes}
                       </button>
                       <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-success transition-colors">
@@ -119,7 +121,7 @@ export default function SocialPage() {
         <div className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Top Performers</CardTitle>
+              <CardTitle className="text-lg">{t("Top Performers")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               {teamPerformanceData.slice(0, 5).map((member, index) => (
@@ -132,7 +134,9 @@ export default function SocialPage() {
                   </Avatar>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium truncate">{member.name}</p>
-                    <p className="text-xs text-muted-foreground">{member.tasksCompleted} tasks</p>
+                    <p className="text-xs text-muted-foreground">
+                      {t("{{count}} tasks", { count: member.tasksCompleted })}
+                    </p>
                   </div>
                   <div className="flex items-center gap-1 text-xs text-success">
                     <Zap className="h-3 w-3" />
@@ -145,27 +149,27 @@ export default function SocialPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Team Stats</CardTitle>
+              <CardTitle className="text-lg">{t("Team Stats")}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="h-4 w-4 text-success" />
-                  <span className="text-sm">Avg. Satisfaction</span>
+                  <span className="text-sm">{t("Avg. Satisfaction")}</span>
                 </div>
                 <span className="text-sm font-bold">95.5%</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Award className="h-4 w-4 text-blue-500" />
-                  <span className="text-sm">Tasks Completed</span>
+                  <span className="text-sm">{t("Tasks Completed")}</span>
                 </div>
                 <span className="text-sm font-bold">770</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4 text-orange-500" />
-                  <span className="text-sm">Avg. Efficiency</span>
+                  <span className="text-sm">{t("Avg. Efficiency")}</span>
                 </div>
                 <span className="text-sm font-bold">93%</span>
               </div>
@@ -174,7 +178,7 @@ export default function SocialPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Activity Summary</CardTitle>
+              <CardTitle className="text-lg">{t("Activity Summary")}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
@@ -185,7 +189,7 @@ export default function SocialPage() {
                   { label: "Shares", value: "23" },
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">{stat.label}</span>
+                    <span className="text-muted-foreground">{t(stat.label)}</span>
                     <span className="font-medium">{stat.value}</span>
                   </div>
                 ))}

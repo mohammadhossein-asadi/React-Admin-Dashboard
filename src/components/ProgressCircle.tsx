@@ -6,14 +6,24 @@ interface ProgressCircleProps {
   showLabel?: boolean;
 }
 
-export const ProgressCircle = memo(function ProgressCircle({ progress = 0.75, size = 40, showLabel = false }: ProgressCircleProps) {
+export const ProgressCircle = memo(function ProgressCircle({
+  progress = 0.75,
+  size = 40,
+  showLabel = false,
+}: ProgressCircleProps) {
   const radius = (size - 8) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - progress * circumference;
 
   return (
     <div className="relative inline-flex items-center justify-center">
-      <svg width={size} height={size} className="-rotate-90">
+      <svg
+        width={size}
+        height={size}
+        className="-rotate-90"
+        role="img"
+        aria-label={`Progress: ${Math.round(progress * 100)}%`}
+      >
         <circle
           cx={size / 2}
           cy={size / 2}

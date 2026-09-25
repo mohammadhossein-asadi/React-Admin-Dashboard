@@ -1,33 +1,42 @@
-import { type ColumnDef } from "@tanstack/react-table";
-import { Header } from "@/components/Header";
-import { DataTable } from "@/components/DataTable";
-import { mockDataInvoices } from "@/data/mock-data";
+import { useMemo } from "react";
+import type { LegacyColumnDef } from "@tanstack/react-table/legacy";
+import { useTranslation } from "react-i18next";
+import { ListPage } from "@/components/ListPage";
+import { getInvoices } from "@/services";
 import type { Invoice } from "@/types";
 
-const columns: ColumnDef<Invoice, unknown>[] = [
-  { accessorKey: "id", header: "ID" },
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
-  },
-  { accessorKey: "phone", header: "Phone Number" },
-  { accessorKey: "email", header: "Email" },
-  {
-    accessorKey: "cost",
-    header: "Cost",
-    cell: ({ row }) => (
-      <span className="font-medium text-success">${row.original.cost.toLocaleString()}</span>
-    ),
-  },
-  { accessorKey: "date", header: "Date" },
-];
-
 export default function InvoicesPage() {
+  const { t } = useTranslation();
+
+  const columns = useMemo<LegacyColumnDef<Invoice, unknown>[]>(
+    () => [
+      { accessorKey: "id", header: t("ID") },
+      {
+        accessorKey: "name",
+        header: t("Name"),
+        cell: ({ row }) => <span className="font-medium text-success">{row.original.name}</span>,
+      },
+      { accessorKey: "phone", header: t("Phone Number") },
+      { accessorKey: "email", header: t("Email") },
+      {
+        accessorKey: "cost",
+        header: t("Cost"),
+        cell: ({ row }) => (
+          <span className="font-medium text-success">${row.original.cost.toLocaleString()}</span>
+        ),
+      },
+      { accessorKey: "date", header: t("Date") },
+    ],
+    [t]
+  );
+
   return (
-    <div className="space-y-6">
-      <Header title="INVOICES" subtitle="List of Invoice Balances" />
-      <DataTable columns={columns} data={mockDataInvoices} searchColumn="name" searchPlaceholder="Search by name..." />
-    </div>
+    <ListPage
+      subtitle={t("List of Invoice Balances")}
+      loader={getInvoices}
+      columns={columns}
+      searchColumn="name"
+      searchPlaceholder={t("Search by name...")}
+    />
   );
 }

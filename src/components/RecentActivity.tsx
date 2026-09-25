@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { mockActivityLog } from "@/data/mock-data";
 
 export function RecentActivity() {
+  const { t } = useTranslation();
   return (
     <div className="space-y-3">
       {mockActivityLog.map((entry) => {
@@ -13,7 +15,7 @@ export function RecentActivity() {
             <div className="flex-1 min-w-0">
               <p className="text-sm">
                 <span className="font-medium text-success">{entry.user}</span>{" "}
-                <span className="text-muted-foreground">{entry.action}</span>{" "}
+                <span className="text-muted-foreground">{t(entry.action)}</span>{" "}
                 <span className="font-medium">{entry.target}</span>
               </p>
               <p className="text-xs text-muted-foreground">{entry.timestamp}</p>

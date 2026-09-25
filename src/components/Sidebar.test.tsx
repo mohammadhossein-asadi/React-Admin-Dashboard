@@ -1,13 +1,23 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import { Sidebar } from "@/components/Sidebar";
+import { AuthProvider } from "@/contexts/auth-context";
 
 function renderWithRouter(ui: React.ReactElement) {
-  return render(<BrowserRouter>{ui}</BrowserRouter>);
+  return render(
+    <AuthProvider>
+      <BrowserRouter>{ui}</BrowserRouter>
+    </AuthProvider>
+  );
 }
 
 describe("Sidebar", () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   it("renders the logo text", () => {
     renderWithRouter(<Sidebar />);
     expect(screen.getByText("ADMINIS")).toBeInTheDocument();
@@ -40,5 +50,27 @@ describe("Sidebar", () => {
     renderWithRouter(<Sidebar />);
     expect(screen.getByText("Mohammadhossein")).toBeInTheDocument();
     expect(screen.getByText("VP Fancy Admin")).toBeInTheDocument();
+  });
+
+  it("collapses and persists the state", async () => {
+    const user = userEvent.setup();
+    renderWithRouter(<Sidebar />);
+
+    await user.click(screen.getByRole("button", { name: "Collapse sidebar" }));
+
+    expect(localStorage.getItem("sidebar-collapsed")).toBe("true");
+    expect(screen.getByRole("button", { name: "Expand sidebar" })).toBeInTheDocument();
+    expect(screen.queryByText("Mohammadhossein")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Expand sidebar" }));
+    expect(localStorage.getItem("sidebar-collapsed")).toBe("false");
+    expect(screen.getByText("Mohammadhossein")).toBeInTheDocument();
+  });
+
+  it("renders without the desktop aside in mobile mode", () => {
+    renderWithRouter(<Sidebar isMobile />);
+    expect(screen.queryByRole("complementary")).not.toBeInTheDocument();
+    expect(screen.getByText("ADMINIS")).toBeInTheDocument();
+    expect(screen.getByText("Dashboard")).toBeInTheDocument();
   });
 });

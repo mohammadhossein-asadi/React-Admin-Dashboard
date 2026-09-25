@@ -11,7 +11,16 @@ interface TreemapChartProps {
   data: TreemapData[];
 }
 
-const COLORS = ["#16a34a", "#2563eb", "#f59e0b", "#8b5cf6", "#ef4444", "#06b6d4", "#ec4899", "#14b8a6"];
+const COLORS = [
+  "#16a34a",
+  "#2563eb",
+  "#f59e0b",
+  "#8b5cf6",
+  "#ef4444",
+  "#06b6d4",
+  "#ec4899",
+  "#14b8a6",
+];
 
 function CustomContent(props: Record<string, unknown>) {
   const { x, y, width, height, name, color, index } = props as {
@@ -90,7 +99,10 @@ export function TreemapChart({ data }: TreemapChartProps) {
             borderRadius: "8px",
             fontSize: "12px",
           }}
-          formatter={(value: number, name: string) => [`${value.toLocaleString()}`, name]}
+          formatter={(value, name) => [
+            typeof value === "number" ? value.toLocaleString() : String(value),
+            String(name),
+          ]}
         />
       </Treemap>
     </ResponsiveContainer>

@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 import { Droppable } from "@hello-pangea/dnd";
 import { KanbanCard } from "./KanbanCard";
 import { cn } from "@/lib/utils";
@@ -8,11 +9,14 @@ interface KanbanColumnProps {
   column: KanbanColumnType;
 }
 
-export const KanbanColumnComponent = memo(function KanbanColumnComponent({ column }: KanbanColumnProps) {
+export const KanbanColumnComponent = memo(function KanbanColumnComponent({
+  column,
+}: KanbanColumnProps) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col rounded-lg bg-muted/50 p-3">
       <div className="mb-3 flex items-center justify-between">
-        <h3 className="text-sm font-semibold">{column.title}</h3>
+        <h3 className="text-sm font-semibold">{t(column.title)}</h3>
         <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
           {column.tasks.length}
         </span>

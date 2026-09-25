@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +30,7 @@ const statusLabels = {
 };
 
 export default function TicketsPage() {
+  const { t } = useTranslation();
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [priorityFilter] = useState<string>("all");
   const [search, setSearch] = useState("");
@@ -46,38 +48,38 @@ export default function TicketsPage() {
 
   return (
     <div className="space-y-6 min-w-0">
-      <Header title="SUPPORT TICKETS" subtitle="Manage customer support requests" />
+      <Header subtitle={t("Manage customer support requests")} />
 
       {/* Stats */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-success">{ticketStats.open}</p>
-            <p className="text-sm text-muted-foreground">Open</p>
+            <p className="text-sm text-muted-foreground">{t("Open")}</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-blue-500">{ticketStats.inProgress}</p>
-            <p className="text-sm text-muted-foreground">In Progress</p>
+            <p className="text-sm text-muted-foreground">{t("In Progress")}</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-muted-foreground">{ticketStats.resolved}</p>
-            <p className="text-sm text-muted-foreground">Resolved</p>
+            <p className="text-sm text-muted-foreground">{t("Resolved")}</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold">{ticketStats.avgResponseTime}</p>
-            <p className="text-sm text-muted-foreground">Avg Response</p>
+            <p className="text-sm text-muted-foreground">{t("Avg Response")}</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-success">{ticketStats.satisfactionRate}%</p>
-            <p className="text-sm text-muted-foreground">Satisfaction</p>
+            <p className="text-sm text-muted-foreground">{t("Satisfaction")}</p>
           </CardContent>
         </Card>
       </div>
@@ -89,7 +91,7 @@ export default function TicketsPage() {
             <div className="relative flex-1 min-w-[200px]">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search tickets..."
+                placeholder={t("Search tickets...")}
                 className="pl-8"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -102,7 +104,7 @@ export default function TicketsPage() {
                 onClick={() => setStatusFilter("all")}
                 className="rounded-none first:rounded-l-md"
               >
-                All
+                {t("All")}
               </Button>
               {Object.entries(statusLabels).map(([key, label]) => (
                 <Button
@@ -112,7 +114,7 @@ export default function TicketsPage() {
                   onClick={() => setStatusFilter(key)}
                   className="rounded-none last:rounded-r-md"
                 >
-                  {label}
+                  {t(label)}
                 </Button>
               ))}
             </div>
@@ -126,8 +128,17 @@ export default function TicketsPage() {
           <Card key={ticket.id}>
             <CardContent className="p-4">
               <div
+                role="button"
+                tabIndex={0}
+                aria-expanded={expandedTicket === ticket.id}
                 className="flex cursor-pointer items-start justify-between"
                 onClick={() => setExpandedTicket(expandedTicket === ticket.id ? null : ticket.id)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setExpandedTicket(expandedTicket === ticket.id ? null : ticket.id);
+                  }
+                }}
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -137,17 +148,17 @@ export default function TicketsPage() {
                   <div className="mt-2 flex items-center gap-3 text-sm text-muted-foreground">
                     <span>{ticket.customer}</span>
                     <span>•</span>
-                    <span>{ticket.category}</span>
+                    <span>{t(ticket.category)}</span>
                     <span>•</span>
                     <span>{new Date(ticket.updatedAt).toLocaleDateString()}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Badge className={priorityColors[ticket.priority]} variant="secondary">
-                    {ticket.priority}
+                    {t(ticket.priority)}
                   </Badge>
                   <Badge className={statusColors[ticket.status]} variant="secondary">
-                    {statusLabels[ticket.status]}
+                    {t(statusLabels[ticket.status])}
                   </Badge>
                   {expandedTicket === ticket.id ? (
                     <ChevronUp className="h-4 w-4 text-muted-foreground" />
@@ -174,8 +185,8 @@ export default function TicketsPage() {
                     </div>
                   ))}
                   <div className="flex gap-2 pt-2">
-                    <Input placeholder="Type a reply..." className="flex-1" />
-                    <Button size="sm">Reply</Button>
+                    <Input placeholder={t("Type a reply...")} className="flex-1" />
+                    <Button size="sm">{t("Reply")}</Button>
                   </div>
                 </div>
               )}

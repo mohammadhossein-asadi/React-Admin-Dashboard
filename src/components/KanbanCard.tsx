@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 import { Draggable } from "@hello-pangea/dnd";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -16,6 +17,7 @@ const priorityConfig = {
 };
 
 export const KanbanCard = memo(function KanbanCard({ task, index }: KanbanCardProps) {
+  const { t } = useTranslation();
   const config = priorityConfig[task.priority];
 
   return (
@@ -33,12 +35,10 @@ export const KanbanCard = memo(function KanbanCard({ task, index }: KanbanCardPr
           <div className="flex items-start justify-between gap-2">
             <h4 className="text-sm font-medium leading-snug">{task.title}</h4>
             <Badge variant={config.variant} className="shrink-0 text-xs">
-              {config.label}
+              {t(config.label)}
             </Badge>
           </div>
-          <p className="mt-1.5 text-xs text-muted-foreground line-clamp-2">
-            {task.description}
-          </p>
+          <p className="mt-1.5 text-xs text-muted-foreground line-clamp-2">{task.description}</p>
           <div className="mt-3 flex items-center gap-2">
             <div className="flex h-5 w-5 items-center justify-center rounded-full bg-success/10 text-[10px] font-medium text-success">
               {task.assignee
