@@ -25,3 +25,12 @@ dist-ssr
 
 # bundle analysis output
 stats.html
+
+# Coverage reports
+coverage/
+
+# Test results
+test-results/
+
+# Playwright reports
+playwright-report/
